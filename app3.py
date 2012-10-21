@@ -1,11 +1,13 @@
 import os
+import json
 from flask import Flask
+from flask import render_template
 
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    return '4.43'
+def index():
+    return  render_template('prices.html')
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
