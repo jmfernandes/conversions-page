@@ -158,7 +158,7 @@ textarea {
 }
 
 body {
-  background: url('http://conversions.herokuapp.com/static/img/asfalt.png');
+  background-image: url('http://conversions.herokuapp.com/static/img/asfalt.png');
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
