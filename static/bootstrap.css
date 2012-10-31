@@ -164,7 +164,9 @@ body {
   line-height: 20px;
   color: #333333;
   background-image:url('paper.gif');
-  background-color:#cccccc;
+  background-size: 1440px 800px;
+  background-repeat:no-repeat;
+  display: compact;
 }
 
 a {
