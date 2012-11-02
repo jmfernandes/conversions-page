@@ -5,7 +5,7 @@
 //
 function date_ddmmmyy(date)
 {
-  var d = date.getSeconds();
+  var d = date.getDate();
   var m = date.getMonth() + 1;
   var y = date.getYear();
 
