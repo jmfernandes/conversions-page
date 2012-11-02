@@ -5,9 +5,9 @@
 //
 function date_ddmmmyy(date)
 {
-  var d = date.getDate();
+  var d = date.getSeconds();
   var m = date.getMonth() + 1;
-  var y = date.getseconds();
+  var y = date.getYear();
 
   // handle different year values 
   // returned by IE and NS in 
