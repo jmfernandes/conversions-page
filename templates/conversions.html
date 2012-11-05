@@ -1,121 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Conversion Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Le styles -->
-    <link href="../static/bootstrap.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-      footer {
-            position:absolute;
-            bottom:0;
-            width:100%;
-            height:20px;   /* Height of the footer */
-            background:#6cf;
-      }
-    </style>
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-  </head>
-
-  <body>
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Project name</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#"><i class="icon-home icon-white"></i>Home</a></li>
-              <li><a href="#about"></i>About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-              <form class="navbar-search pull-right">
-                  <input type="text" class="input-medium search-query">
-                      <button type="submit" class="btn">Search</button>
-                      </form>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Pages</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span9"> 
-          <div class="hero-unit">
-            <h1>Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-          </div>
-          <div class="row-fluid">
-            <div class="span6">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            </div><!--/span-->
-            <div class="span6">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            </div><!--/span-->
-          </div><!--/row-->
-        </div><!--/span-->
-      </div><!--/row-->
-
-      <hr>
-
-      <footer>
-          <nav>
-              Copyright &copy; Josh Fernandes 2012
-          </nav>
-      </footer>
-
-    </div><!--/.fluid-container-->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../static/js/jquery.js"></script>
-    <script src="../static/js/bootstrap.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script>
-
-  </body>
-</html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+                <title>Constants Page</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <meta name="description" content="">
+                        <meta name="author" content="">
+                            <link rel="stylesheet" type="text/css" href="http://conversions.herokuapp.com/static/bootstrap.css" />
+                            <style type="text/css">
+                                body {
+                                    padding-top: 60px;
+                                    padding-bottom: 40px;
+                                }
+                                .sidebar-nav {
+                                    padding: 9px 0;
+                                }
+                                th
+                                {
+                                    text-align: center
+                                }
+                                td
+                                {
+                                    padding:15px; text-align: left
+                                }
+                                footer {
+                                    position:absolute;
+                                    bottom:0;
+                                    width:100%;
+                                    height:20px;   /* Height of the footer */
+                                    background:#6cf;
+                                }
+                                </style>
+                            <link rel="shortcut icon" href="ico/favicon.ico">
+                                <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+                                    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+                                        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+                                            <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+                                                </head>
+        <body>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="http://datanab.net/">Project name</a>
+                        <div class="nav-collapse">
+                            <ul class="nav">
+                                <li><a href="http://www.datanab.net/"><i class="icon-home icon-white"></i>Home</a></li>
+                                <li><a href="http://www.datanab.net/about"><i class="icon-info-sign icon-white"></i>About</a></li>
+                                <li><a href="http://www.datanab.net/contact"><i class="icon-user icon-white"></i>Contact</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
+                                        Pages <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a tabindex="-1" href="http://constants.herokuapp.com">Constants</a></li>
+                                        <li class="divider"></li>
+                                        <li><a tabindex="-1" href="http://conversions.herokuapp.com">Conversions</a></li>
+                                        <li><a tabindex="-1" href="http://prices.herokuapp.com">Prices</a></li>
+                                        <li class="divider"></li>
+                                        <li><a tabindex="-1" href="http://efficiencies.herokuapp.com">Efficiencies</a></li>
+                                        <li class="divider"></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form class="navbar-search pull-right">
+                                <input type="text" class="input-medium search-query" placeholder="Search">
+                                    <button type="submit" class="btn">Search</button>
+                                    </form>
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="well sidebar-nav">
+                            <ul class="nav nav-list">
+                                <li class="nav-header">Pages</li>
+                                <li class="active"><a href="http://www.constants.datanab.net/">Constants</a></li>
+                                <li><a href="http://www.conversions.datanab.net/">Conversion Coefficients</a></li>
+                                <li><a href="http://www.prices.datanab.net/">Prices</a></li>
+                                <li><a href="http://www.efficiency.datanab.net/">Efficiencies</a></li>
+                            </ul>
+                        </div><!--/.well -->
+                    </div><!--/span-->
+                    <div class="span9">
+                        <div class="well well-small">
+                            <h3>Constants</h3>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <table border="0" width="500" >
+                                    <tr>
+                                        <th>Physics Constants</th>
+                                        <th>Chemistry Constants</th>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="http://www.constants.datanab.net/physics/planck_constant">Planck's Constant</a><br>
+                                            <a href="http://www.constants.datanab.net/physics/standard_gravity">Standard Gravity</a><br>
+                                            <a href="http://www.constants.datanab.net/physics/electron_mass">Electron Mass</a><br>
+                                            <a href="http://www.constants.datanab.net/physics/characteristic_impedance_of_vacuum">Impedance of a vacuum</a><br>
+                                            <a href="http://www.constants.datanab.net/physics/vacuum_permittivity">Vacuum Permittivity</a><br>
+                                            <a href="http://www.constants.datanab.net/physics/proton_mass">Proton Mass</a><br>
+                                            <a href="http://www.constants.datanab.net/physics/neutron_mass">Neutron Mass</a><br>
+                                            <a href="http://www.constants.datanab.net/physics/elementary_charge">Elementray Charge</a><br></td>
+                                        <td>row 1, cell 2</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Biology Constants</th>
+                                        <th>Engineering Constants</th>
+                                    </tr>
+                                    <tr>
+                                        <td>row 2, cell 1</td>
+                                        <td>row 2, cell 2</td>
+                                    </tr>
+                                </table>
+                            </div><!--/span-->
+                            <div class="span6">
+                                <h2>Heading</h2>
+                                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            </div><!--/span-->
+                        </div><!--/row-->
+                    </div><!--/span-->
+                </div><!--/row-->
+                
+                <hr>
+                
+            </div><!--/.fluid-container-->
+            <footer> <!-- site wide footer -->
+                <nav>
+                    Copyright &copy; Josh Fernandes 2012
+                </nav>
+            </footer>
+            <script src="http://conversions.herokuapp.com/static/js/jquery.js"></script>
+            <script src="http://conversions.herokuapp.com/static/js/bootstrap.js"></script>
+            <script src="http://conversions.herokuapp.com/static/js/bootstrap.min.js"></script>
+            <script src="http://conversions.herokuapp.com/static/js/timestamp.js"></script>
+            <script src="http://conversions.herokuapp.com/static/js/bootstrap-dropdown.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                                  $('.dropdown-toggle').dropdown();
+                                  });
+                </script>
+        </body>
+    </html>
