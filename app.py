@@ -13,11 +13,11 @@ def page_not_found(error):
 def index():
     return  render_template('conversions.html')
 
-@app.route('/physics/ev_to_joules', endpoint='ev_to_joules')
+@app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
 def index():
     return  render_template('ev_to_joules.html')
 
-@app.route('/physics/ev_to_joules_json', endpoint='ev_to_joules_json')
+@app.route('/energy/ev_to_joules_json', endpoint='ev_to_joules_json')
 def index():
     return  render_template('json/ev_to_joules.json')
 
