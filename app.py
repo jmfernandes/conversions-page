@@ -19,7 +19,7 @@ def index():
 
 @app.route('/physics/ev_to_joules_json', endpoint='ev_to_joules_json')
 def index():
-    return  render_template('joule/ev_to_joules.json')
+    return  render_template('json/ev_to_joules.json')
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
