@@ -2,6 +2,7 @@ import os
 import json
 from flask import Flask
 from flask import render_template
+from flask import json
 
 app = Flask(__name__)
 
@@ -15,7 +16,10 @@ def index():
 
 @app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
 def index():
-    return  render_template('ev_to_joules.html')
+    json_file = open('templates/json/ev_to_joules.json')
+    data = json.load(json_file)
+    json_file.close()
+    return  render_template('ev_to_joules.html',data=data)
 
 @app.route('/energy/ev_to_joules_json', endpoint='ev_to_joules_json')
 def index():
