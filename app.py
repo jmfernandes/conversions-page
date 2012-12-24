@@ -3,14 +3,10 @@ import json
 from flask import Flask
 from flask import render_template
 from flask import json
-from wtforms import Form, BooleanField, TextField, validators
-
-class RegistrationForm(Form):
-    username     = TextField('Username', [validators.Length(min=4, max=25)])
-    email        = TextField('Email Address', [validators.Length(min=6, max=35)])
-    accept_rules = BooleanField('I accept the site rules', [validators.Required()])
 
 app = Flask(__name__)
+
+app.secret_key="cheese"
 
 @app.errorhandler(404)
 def page_not_found(error):
