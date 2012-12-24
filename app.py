@@ -12,11 +12,8 @@ class Main(flask.views.MethodView):
     def get(self):
         pass
     def post(self):
-        required = ['first']
-            for r in required:
-                if r not flask.request.form:
-                    flash("error:{0} is required.".format(r))
-                    return render_template('conversions.html')
+        pass
+            
 
 @app.errorhandler(404)
 def page_not_found(error):
