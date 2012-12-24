@@ -8,6 +8,16 @@ app = Flask(__name__)
 
 app.secret_key="cheese"
 
+class Main(flask.views.MethodView):
+    def get(self):
+        pass
+    def post(self):
+        required = ['first']
+            for r in required:
+                if r not flask.request.form:
+                    flash("error:{0} is required.".format(r))
+                    return render_template('conversions.html')
+
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('page_not_found.html'), 404
