@@ -19,12 +19,8 @@ app.secret_key="cheese"
 #                    return render_template('conversions.html')
 #            first = request.form['first']
 
-class View(flask.views.MethodView):
-    def get(self):
-        return "get"
-
-    def post(self):
-        return "Works!"
+class View(self):
+    pass
             
 
 @app.errorhandler(404)
