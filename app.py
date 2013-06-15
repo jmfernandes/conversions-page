@@ -24,8 +24,10 @@ app.secret_key="cheese"
 def page_not_found(error):
     return render_template('page_not_found.html'), 404
 
-@app.route('/')
+@app.route('/',methods=['GET','POST'])
 def index():
+    if request.method=="GET":
+        return "hello"
     return  render_template('conversions.html')
 
 @app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
