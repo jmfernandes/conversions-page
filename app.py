@@ -46,7 +46,7 @@ def index():
 def index():
     return  render_template('json/ev_to_joules.json')
 
-add.app_url_rule('/', view_func=View.as_view('main'), methods=['GET','POST'])
+#add.app_url_rule('/', view_func=View.as_view('main'), methods=['GET','POST'])
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
