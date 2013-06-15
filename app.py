@@ -18,6 +18,13 @@ app.secret_key="cheese"
 #                    flash("error:{0} is required.".format(r))
 #                    return render_template('conversions.html')
 #            first = request.form['first']
+
+class View(flask.views.MethodView):
+    def get(self):
+        return "get"
+
+    def post(self):
+        return "Works!"
             
 
 @app.errorhandler(404)
@@ -38,6 +45,8 @@ def index():
 @app.route('/energy/ev_to_joules_json', endpoint='ev_to_joules_json')
 def index():
     return  render_template('json/ev_to_joules.json')
+
+add.app_url_rule('/', view_func=View.as_view('main'), methods=['GET','POST'])
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
