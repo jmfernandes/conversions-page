@@ -1,2 +1,2 @@
-you entered <?php echo $_GET["cinput"]; ?>.<br>
-the units are <?php echo $_GET["cunits"]; ?>.
+you entered <?php echo $_GET["numbers"]; ?>.<br>
+the units are <?php echo $_GET["units"]; ?>.
