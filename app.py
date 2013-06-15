@@ -19,9 +19,6 @@ app.secret_key="cheese"
 #                    return render_template('conversions.html')
 #            first = request.form['first']
 
-class View(self):
-    pass
-            
 
 @app.errorhandler(404)
 def page_not_found(error):
