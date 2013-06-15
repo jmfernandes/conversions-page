@@ -118,7 +118,7 @@
                         <div class="row-fluid">
                             <div class="span12">
                                 <form method="get" action="conversions.php">
-                                <input type="text" name="numbers" class="span3" placeholder="Type value here">
+                                <input type="text" name="number" class="span3" placeholder="Type value here">
                                     <select class="span2" name="units">
                                         <option>meters</option>
                                         <option>inches</option>
@@ -127,10 +127,10 @@
                                         <option>leagues</option>
                                     </select>
                                 <button id="convertbut" class="btn" type="submit" style="position:relative; bottom:-140px; right:39%;">Convert!</button>
-                                </form>
+                                <br>
                                 <span class="help-inline"><h4>to</h4></span>
-                                <form method="post">
-                                <input class="span3" id="appendedInputButton" type="text" placeholder="Result appears here">
+                                <br>
+                                <input class="span3" name="result" id="appendedInputButton" type="text" placeholder="Result appears here">
                                     <select class="span2">
                                         <option>meters</option>
                                         <option>inches</option>
