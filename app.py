@@ -34,9 +34,10 @@ def index():
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
     if request.method == 'POST':
-        return  render_template('dataconfig.html')
-    else
-        return  render_template('conversions.html')
+        pass
+    else:
+        pass
+    return  render_template('conversions.html')
 
 @app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
 def index():
@@ -57,3 +58,4 @@ if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
+
