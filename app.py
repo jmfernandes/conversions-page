@@ -4,8 +4,6 @@ from flask import Flask
 from flask import render_template
 from flask import json
 
-class something(self):
-    pass
 
 app = Flask(__name__)
 
