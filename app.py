@@ -34,9 +34,9 @@ def index():
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
     if request.method == 'POST':
-        data = 5
+        data = request.form['number']
     else:
-        data = 4
+        pass
     return  render_template('dataconfig2.html', data=data)
 
 @app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
