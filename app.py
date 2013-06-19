@@ -31,9 +31,12 @@ def page_not_found(error):
 def index():
     return  render_template('conversions.html')
 
-@app.route('/data', methods =['POSt'])
-def index():
-    return  render_template('conversions.html')
+@app.route('/data', methods =['GET','POST'])
+def handle_data():
+    if request.method == 'POST':
+        return  render_template('dataconfig.html')
+    else
+        return  render_template('conversions.html')
 
 @app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
 def index():
