@@ -6,6 +6,8 @@ from flask import json
 
 app = Flask(__name__)
 
+
+CSRF_ENABLED = True
 app.secret_key="cheese"
 
 #class Main(flask.views.MethodView):
@@ -27,6 +29,10 @@ def page_not_found(error):
 @app.route('/',methods=['GET','POST'])
 def index():
     return  render_template('conversions.html')
+
+@app.route('/cheese?number=&units=meters&result=meters')
+def stuff():
+    return "hello"
 
 @app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
 def index():
