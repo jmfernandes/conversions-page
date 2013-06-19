@@ -33,11 +33,12 @@ def index():
 
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
+    data = {'num':0, 'unit':'', 'res':0}
     #if request.method == 'POST':
-    if reqeust.form.get('units',None) == meters:
-        data = 6
-    else:
-        data = 4
+    #if reqeust.form.get('units',None) == meters:
+        #data = 6
+    #else:
+        #data = 4
     return  render_template('dataconfig2.html', data=data)
 
 @app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
