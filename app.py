@@ -34,7 +34,7 @@ def index():
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
     if request.method == 'POST':
-        data = request.form['number']
+        data = 5
     else:
         pass
     return  render_template('dataconfig2.html', data=data)
