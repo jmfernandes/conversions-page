@@ -34,7 +34,8 @@ def index():
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
     data = {'num':0, 'unit':'', 'res':0}
-    data['num'] = request.form.get('units',None)
+    if request.method == 'POST':
+        data['num'] = request.form.get('units',None)
     #if request.method == 'POST':
     #if reqeust.form.get('units',None) == meters:
         #data = 6
