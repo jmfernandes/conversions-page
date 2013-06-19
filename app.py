@@ -31,6 +31,9 @@ def page_not_found(error):
 def index():
     return  render_template('conversions.html')
 
+@app.route('/data', methods =['POSt'])
+    return "this is a test"
+
 @app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
 def index():
     json_file = open('templates/json/ev_to_joules.json')
