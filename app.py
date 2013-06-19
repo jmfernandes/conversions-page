@@ -27,15 +27,14 @@ app.secret_key="cheese"
 def page_not_found(error):
     return render_template('page_not_found.html'), 404
 
-@app.route('/',methods=['GET','POST'])
+@app.route('/')
 def index():
     return  render_template('conversions.html')
 
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
     data = {'num':0, 'unit':'', 'res':0}
-    if request.method == 'POST':
-        data['num'] = request.form.get('units',None)
+    data['num'] = request.form.get('units',None)
     #if request.method == 'POST':
     #if reqeust.form.get('units',None) == meters:
         #data = 6
