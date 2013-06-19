@@ -32,7 +32,8 @@ def index():
     return  render_template('conversions.html')
 
 @app.route('/data', methods =['POSt'])
-    return "this is a test"
+def index():
+    return  render_template('constants.html')
 
 @app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
 def index():
