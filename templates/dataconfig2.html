@@ -167,7 +167,8 @@
             </script>
             <script>
                 $(function() {
-                  $("#units").val('inches');
+                  var variable = {{data['unit']}}
+                  $("#units").val(variable);
                   });
                 $("ol").hover(
                               function () {
