@@ -32,13 +32,15 @@ def index():
 
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
-    data = {'num':0, 'unit':'', 'res':0}
-    data['num'] = request.form.get('units',None)
+    data = {'num':0, 'unit':'', 'unitres':'', 'res':0}
+    data['num'] = request.form.get('number',None)
+    data['unit'] = request.form.get('units',None)
+    data['unitres'] = request.form.get('resultunit',None)
     json_file = open('templates/json/ev_to_joules.json')
     jsondata = json.load(json_file)
     json_file.close()
-    flash('hi')
     #modify data['num'] with json data
+    #data['res'] = modified number
     return  render_template('dataconfig2.html', data=data)
 
 @app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
