@@ -43,7 +43,7 @@ def handle_data():
     if data['unit'] == 'meters' and data['unitres'] == 'meters':
         data['res'] = float(data['num'])*5.0
     else:
-        data['res'] = float(data['num'])*5.0
+        data['res'] = data['unit']
     return  render_template('dataconfig2.html', data=data)
 
 @app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
