@@ -166,10 +166,8 @@
                                   });
             </script>
             <script>
-                $(function() {
-                  var variable = {{data['unit']}}
-                  $("#units").val(variable);
-                  });
+                var variable = {{data['unit']}}
+                $("#units").val(variable);
                 $("ol").hover(
                               function () {
                               $(this).append($("<span>&nbsp;&nbsp;(click to open)</span>"));
