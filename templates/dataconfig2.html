@@ -119,12 +119,12 @@
                             <div class="span12">
                                 <form method="post" action="http://www.conversions.datanab.net/data">
                                     <input type="text" name="number" class="span3" value= {{data['num'] }}>
-                                    <select class="span2" name="units">
-                                        <option>meters</option>
-                                        <option>inches</option>
-                                        <option>feet</option>
-                                        <option>yards</option>
-                                        <option>leagues</option>
+                                    <select class="span2" id="units" name="units">
+                                        <option value="0">meters</option>
+                                        <option value="1">inches</option>
+                                        <option value="2">feet</option>
+                                        <option value="3">yards</option>
+                                        <option value="4">leagues</option>
                                     </select>
                                 <br>
                                 <span class="help-inline"><h4>to</h4></span>
@@ -166,6 +166,7 @@
                                   });
             </script>
             <script>
+                $document.getElementById('units').value=2;
                 $("ol").hover(
                               function () {
                               $(this).append($("<span>&nbsp;&nbsp;(click to open)</span>"));
