@@ -118,7 +118,7 @@
                         <div class="row-fluid">
                             <div class="span12">
                                 <form method="post" action="http://www.conversions.datanab.net/data">
-                                    <input type="text" name="number" class="span3" placeholder= {{data['num'] }}>
+                                    <input type="text" name="number" class="span3" value= {{data['num'] }}>
                                     <select class="span2" name="units">
                                         <option>meters</option>
                                         <option>inches</option>
@@ -129,7 +129,7 @@
                                 <br>
                                 <span class="help-inline"><h4>to</h4></span>
                                 <br>
-                                    <input type="text" name="result" class="span3" placeholder= {{ data['res'] }} >
+                                    <input type="text" name="result" class="span3" value= {{ data['res'] }} >
                                     <select class="span2" name="resultunit">
                                         <option>meters</option>
                                         <option>inches</option>
