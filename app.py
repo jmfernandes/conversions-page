@@ -37,6 +37,7 @@ def handle_data():
     json_file = open('templates/json/ev_to_joules.json')
     jsondata = json.load(json_file)
     json_file.close()
+    flash('hi')
     #modify data['num'] with json data
     return  render_template('dataconfig2.html', data=data)
 
