@@ -1,15 +1,17 @@
 import os
-import json
-from flask import Flask
-from flask import render_template
-from flask import json
-from flask import request
+#import json
+from flask import Flask, render_template, json, request
+
 
 app = Flask(__name__)
 
 
 CSRF_ENABLED = True
 app.secret_key="cheese"
+
+class Number(object):
+    pass
+
 
 #class Main(flask.views.MethodView):
 #    def get(self):
@@ -54,8 +56,6 @@ def index():
     return  render_template('json/ev_to_joules.json')
 
 #add.app_url_rule('/', view_func=View.as_view('main'), methods=['GET','POST'])
-
-
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
