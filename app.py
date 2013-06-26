@@ -37,7 +37,7 @@ def handle_data():
     json_file = open('templates/json/ev_to_joules.json')
     jsondata = jsonload(json_file)
     json_file.close()
-    """modify data['num'] with json data""""
+    #modify data['num'] with json data
     #if request.method == 'POST':
     #if reqeust.form.get('units',None) == meters:
         #data = 6
