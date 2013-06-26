@@ -166,8 +166,7 @@
                                   });
             </script>
             <script>
-                var my_v = {{data['unit'] }};
-                var my_value = my_v.toString();
+                var my_value = String({{ data['unit'] }});
                 $('#units option').each(function(){
                                             var $this = $(this); // cache the this jQuery object to avoid overhead
                                             
