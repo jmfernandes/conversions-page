@@ -34,16 +34,10 @@ def index():
 def handle_data():
     data = {'num':0, 'unit':'', 'res':0}
     data['num'] = request.form.get('units',None)
-    jsondata  = 5
-    #json_file = open('templates/json/ev_to_joules.json')
-    #jsondata = jsonload(json_file)
-    #json_file.close()
+    json_file = open('templates/json/ev_to_joules.json')
+    jsondata = jsonload(json_file)
+    json_file.close()
     #modify data['num'] with json data
-    #if request.method == 'POST':
-    #if reqeust.form.get('units',None) == meters:
-        #data = 6
-    #else:
-        #data = 4
     return  render_template('dataconfig2.html', data=data)
 
 @app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
