@@ -40,7 +40,7 @@ def handle_data():
     jsondata = json.load(json_file)
     json_file.close()
     #modify data['num'] with json data
-    #data['res'] = modified number
+    data['res'] = data['num']
     return  render_template('dataconfig2.html', data=data)
 
 @app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
