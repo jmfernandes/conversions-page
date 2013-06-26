@@ -34,6 +34,7 @@ def index():
 def handle_data():
     data = {'num':0, 'unit':'', 'res':0}
     data['num'] = request.form.get('units',None)
+    jsondata  = 5
     #json_file = open('templates/json/ev_to_joules.json')
     #jsondata = jsonload(json_file)
     #json_file.close()
