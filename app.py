@@ -41,9 +41,9 @@ def handle_data():
     json_file.close()
     #modify data['num'] with json data
     if data['unit'] == 'meters' and data['unitres'] == 'meters':
-        data['res'] = float(data['num'])*5.0
+        data['res'] = data['unit'] + data['unitres']
     else:
-        data['res'] = data['unit']
+        data['res'] = data['unit'] + data['unitres']
     return  render_template('dataconfig2.html', data=data)
 
 @app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
