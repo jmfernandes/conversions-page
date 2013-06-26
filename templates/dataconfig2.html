@@ -167,12 +167,10 @@
             </script>
             <script>
                 var my_value = {{data['unit'] }};
-                my_value = my_value.toString();
-                alert(typeof my_value);
                 $('#units option').each(function(){
                                             var $this = $(this); // cache the this jQuery object to avoid overhead
                                             
-                                            if ($this.val() == my_value) { // if this option's value is equal to our value
+                                            if ($this.val() == my_value.val()) { // if this option's value is equal to our value
                                             $this.prop('selected', true); // select this option
                                             return false; // break the loop, no need to look further
                                             }
