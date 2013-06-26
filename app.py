@@ -35,7 +35,7 @@ def handle_data():
     data = {'num':0, 'unit':'', 'res':0}
     data['num'] = request.form.get('units',None)
     json_file = open('templates/json/ev_to_joules.json')
-    jsondata = jsonload(json_file)
+    jsondata = json.load(json_file)
     json_file.close()
     #modify data['num'] with json data
     return  render_template('dataconfig2.html', data=data)
