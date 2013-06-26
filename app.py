@@ -9,9 +9,6 @@ app = Flask(__name__)
 CSRF_ENABLED = True
 app.secret_key="cheese"
 
-class Number(object):
-    pass
-
 
 #class Main(flask.views.MethodView):
 #    def get(self):
@@ -35,7 +32,7 @@ def index():
 
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
-    data = {'num':0, 'unit':'', 'res':0}
+    #data = {'num':0, 'unit':'', 'res':0}
     data['num'] = request.form.get('units',None)
     #if request.method == 'POST':
     #if reqeust.form.get('units',None) == meters:
