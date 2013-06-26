@@ -127,7 +127,7 @@
                                         <option value='leagues'>leagues</option>
                                     </select>
                                 <br>
-                                <span class="help-inline"><h4>to {{data['unit'] }}</h4></span>
+                                <span class="help-inline"><h4>to {{ data['unit'] }}</h4><p class="listprice"></p></span>
                                 <br>
                                     <input type="text" name="result" class="span3" value= {{ data['res'] }} >
                                     <select class="span2" name="resultunit">
@@ -166,15 +166,16 @@
                                   });
             </script>
             <script>
-                var my_value = {{data['unit'] }};
+                var my_value = {{ data['unit'] }};
+                $('.listprice').html(my_value);
                 $('#units option').each(function(){
-                                            var $this = $(this); // cache the this jQuery object to avoid overhead
+                    var $this = $(this); // cache the this jQuery object to avoid overhead
                                             
-                                            if ($this.val() == my_value.val()) { // if this option's value is equal to our value
-                                            $this.prop('selected', true); // select this option
-                                            return false; // break the loop, no need to look further
-                                            }
-                                            });
+                    if ($this.val() == my_value) { // if this option's value is equal to our value
+                        $this.prop('selected', true); // select this option
+                        return false; // break the loop, no need to look further
+                    }
+                });
                 
                 
                 $("ol").hover(
