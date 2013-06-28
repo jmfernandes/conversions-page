@@ -41,7 +41,7 @@ def handle_data():
     json_file.close()
     #modify data['num'] with json data
     if data['unit'] == 'meters' and data['unitres'] == 'meters':
-        data['res'] = float(data['num'])*1.0
+        data['res'] = float(data['num'])*float("1.0e2")
     elif data['unit'] == 'meters' and data['unitres'] == 'inches':
         data['res'] = float(data['num'])*2.0
     elif data['unit'] == 'meters' and data['unitres'] == 'feet':
