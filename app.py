@@ -33,7 +33,7 @@ def index():
 
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
-    data = {'num':0, 'unit':'', 'unitres':'', 'res':0}
+    data = {'num':0, 'unit':'', 'unitres':request.form.get('resultunit',None), 'res':''}
     data['num'] = request.form.get('number',None)
     data['unit'] = request.form.get('units',None)
     data['unitres'] = request.form.get('resultunit',None)
@@ -52,8 +52,6 @@ def handle_data():
     elif data['unit'] == 'meters' and data['unitres'] == 'leagues':
         data['res'] = float(data['num'])*5.0
 
-    if data['num'] == None:
-        data['num'] = 100
     return  render_template('dataconfig2.html', data=data)
 
 
