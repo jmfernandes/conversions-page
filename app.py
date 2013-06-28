@@ -32,7 +32,7 @@ def index():
 
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
-    data = {'num':0, 'unit':'', 'unitres':'', 'res':'Result appears here'}
+    data = {'num':0, 'unit':'', 'unitres':'', 'res':0}
     data['num'] = request.form.get('number',None)
     data['unit'] = request.form.get('units',None)
     data['unitres'] = request.form.get('resultunit',None)
