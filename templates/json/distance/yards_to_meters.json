@@ -1,7 +1,7 @@
 {
-"value": 1.60217646e-19, 
+"value": 0.9144,
 "units": "unitless", 
-"name": "eV to Joule Conversion",
-"citation": "http://www.google.com/search?q=1+ev+to+joules",
-"url": "http://www.conversions.datanab.net/energy/ev_to_joules_json"
+"name": "yards to meters Conversion",
+"citation": "http://www.google.com/search?q=1+yards+to+meters",
+"url": "http://www.conversions.datanab.net/energy/yards_to_meters_json"
 }
