@@ -211,6 +211,61 @@ def index():
 def index():
     return  render_template('json/distance/inches_to_leagues.json')
 
+"""feet"""
+
+@app.route('/distance/feet_to_meters_json', endpoint='feet_to_meters_json')
+def index():
+    return  render_template('json/distance/feet_to_meters.json')
+
+@app.route('/distance/feet_to_inches_json', endpoint='feet_to_inches_json')
+def index():
+    return  render_template('json/distance/feet_to_inches.json')
+
+@app.route('/distance/feet_to_yards_json', endpoint='feet_to_yards_json')
+def index():
+    return  render_template('json/distance/feet_to_yards.json')
+
+@app.route('/distance/feet_to_leagues_json', endpoint='feet_to_leagues_json')
+def index():
+    return  render_template('json/distance/feet_to_leagues.json')
+
+"""yards"""
+
+@app.route('/distance/yards_to_meters_json', endpoint='yards_to_meters_json')
+def index():
+    return  render_template('json/distance/yards_to_meters.json')
+
+@app.route('/distance/yards_to_inches_json', endpoint='yards_to_inches_json')
+def index():
+    return  render_template('json/distance/yards_to_inches.json')
+
+@app.route('/distance/yards_to_feet_json', endpoint='yards_to_feet_json')
+def index():
+    return  render_template('json/distance/yards_to_feet.json')
+
+@app.route('/distance/yards_to_leagues_json', endpoint='yards_to_leagues_json')
+def index():
+    return  render_template('json/distance/yards_to_leagues.json')
+
+"""leagues"""
+
+@app.route('/distance/leagues_to_meters_json', endpoint='leagues_to_meters_json')
+def index():
+    return  render_template('json/distance/leagues_to_meters.json')
+
+@app.route('/distance/leagus_to_inches_json', endpoint='leagues_to_inches_json')
+def index():
+    return  render_template('json/distance/leagues_to_inches.json')
+
+@app.route('/distance/leagues_to_feet_json', endpoint='leagues_to_feet_json')
+def index():
+    return  render_template('json/distance/leagues_to_feet.json')
+
+@app.route('/distance/leagues_to_yards_json', endpoint='leagues_to_yards_json')
+def index():
+    return  render_template('json/distance/leagues_to_yards.json')
+
+
 #add.app_url_rule('/', view_func=View.as_view('main'), methods=['GET','POST'])
 
 if __name__ == '__main__':
