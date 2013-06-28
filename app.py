@@ -54,7 +54,7 @@ def handle_data():
 
     if data['num'] == None:
         data['num'] = 100
-    return  render_template('dataconfig2.html', data=data, yolo="inches")
+    return  render_template('dataconfig2.html', data=data)
 
 
 

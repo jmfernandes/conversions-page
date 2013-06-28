@@ -130,7 +130,7 @@
                                 <span class="help-inline"><h4>to {{ data['unit'] }}</h4></span>
                                 <br>
                                     <input type="text" name="result" class="span3" value= {{ data['res'] }} >
-                                    <select class="span2" name="resultunit">
+                                    <select class="span2" id="resultunit" name="resultunit">
                                         <option value='meters'>meters</option>
                                         <option value='inches'>inches</option>
                                         <option value='feet'>feet</option>
@@ -170,6 +170,7 @@
                 //var {{ data['unit'] }} = {{ data['unit'] }}.toString();
                 //var my_value = {{ data['unit'] }}a.toString();
                 var my_value = '{{ data.unit }}';
+                var my_value2 = '{{ data.unitres }}';
                 //$('#units').val(my_value);
                 
                 $('#units option').each(function(){
@@ -180,6 +181,15 @@
                         return false; // break the loop, no need to look further
                         }
                         });
+                
+                $('#resultunit option').each(function(){
+                                        var $this = $(this); // cache the this jQuery object to avoid overhead
+                                        
+                                        if ($this.val() == my_value2) { // if this option's value is equal to our value
+                                        $this.prop('selected', true); // select this option
+                                        return false; // break the loop, no need to look further
+                                        }
+                                        });
                 
                 
                 $("ol").hover(
