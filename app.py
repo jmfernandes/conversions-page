@@ -4,7 +4,7 @@ from flask import Flask, render_template, json, request
 
 
 app = Flask(__name__)
-app.jinja_env.autoescape = False
+#app.jinja_env.autoescape = False
 
 
 CSRF_ENABLED = True
