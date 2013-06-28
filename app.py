@@ -29,11 +29,12 @@ def page_not_found(error):
 
 @app.route('/')
 def index():
+    foo = 5
     return  render_template('conversions.html')
 
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
-    data = {'num':0, 'unit':'', 'unitres':request.form.get('resultunit',None), 'res':''}
+    data = {'num':0, 'unit':'', 'unitres':'', 'res':index.foo}
     data['num'] = request.form.get('number',None)
     data['unit'] = request.form.get('units',None)
     data['unitres'] = request.form.get('resultunit',None)
