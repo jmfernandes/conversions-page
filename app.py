@@ -52,12 +52,19 @@ def handle_data():
         data['res'] = float(data['num'])*5.0
     return  render_template('dataconfig2.html', data=data)
 
+
+
+"""REFERENCE PAGES"""
+
 @app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
 def index():
     json_file = open('templates/json/ev_to_joules.json')
     data = json.load(json_file)
     json_file.close()
     return  render_template('ev_to_joules.html',data=data)
+
+
+"""JSON PAGES"""
 
 @app.route('/energy/ev_to_joules_json', endpoint='ev_to_joules_json')
 def index():
