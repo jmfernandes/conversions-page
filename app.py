@@ -55,24 +55,24 @@ def handle_data():
         data['res'] = float(data['num'])*5.0
 
     elif data['unit'] == 'inches' and data['unitres'] == 'meters':
-        json_file = open('templates/json/inches_to_meters.json')
+        json_file = open('templates/json/distance/inches_to_meters.json')
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
     elif data['unit'] == 'inches' and data['unitres'] == 'inches':
         data['res'] = float(data['num'])*1.0
     elif data['unit'] == 'inches' and data['unitres'] == 'feet':
-        json_file = open('templates/json/inches_to_feet.json')
+        json_file = open('templates/json/distance/inches_to_feet.json')
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
     elif data['unit'] == 'inches' and data['unitres'] == 'yards':
-        json_file = open('templates/json/inches_to_yards.json')
+        json_file = open('templates/json/distance/inches_to_yards.json')
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
     elif data['unit'] == 'inches' and data['unitres'] == 'leagues':
-        json_file = open('templates/json/inches_to_leagues.json')
+        json_file = open('templates/json/distance/inches_to_leagues.json')
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
