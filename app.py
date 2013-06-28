@@ -39,19 +39,75 @@ def handle_data():
     data['num'] = request.form.get('number',None)
     data['unit'] = request.form.get('units',None)
     data['unitres'] = request.form.get('resultunit',None)
-    json_file = open('templates/json/ev_to_joules.json')
-    jsondata = json.load(json_file)
-    json_file.close()
     #modify data['num'] with json data
     if data['unit'] == 'meters' and data['unitres'] == 'meters':
-        data['res'] = float(data['num'])*float(jsondata['value'])
+        data['res'] = float(data['num'])*1.0
     elif data['unit'] == 'meters' and data['unitres'] == 'inches':
+        json_file = open('templates/json/ev_to_joules.json')
+        jsondata = json.load(json_file)
+        json_file.close()
         data['res'] = float(data['num'])*2.0
     elif data['unit'] == 'meters' and data['unitres'] == 'feet':
         data['res'] = float(data['num'])*3.0
     elif data['unit'] == 'meters' and data['unitres'] == 'yards':
         data['res'] = float(data['num'])*4.0
     elif data['unit'] == 'meters' and data['unitres'] == 'leagues':
+        data['res'] = float(data['num'])*5.0
+
+    elif data['unit'] == 'inches' and data['unitres'] == 'meters':
+        json_file = open('templates/json/inches_to_meters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'inches' and data['unitres'] == 'inches':
+        data['res'] = float(data['num'])*1.0
+    elif data['unit'] == 'inches' and data['unitres'] == 'feet':
+        json_file = open('templates/json/inches_to_feet.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'inches' and data['unitres'] == 'yards':
+        json_file = open('templates/json/inches_to_yards.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'inches' and data['unitres'] == 'leagues':
+        json_file = open('templates/json/inches_to_leagues.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
+    elif data['unit'] == 'feet' and data['unitres'] == 'meters':
+        data['res'] = float(data['num'])*5.0
+    elif data['unit'] == 'feet' and data['unitres'] == 'inches':
+        data['res'] = float(data['num'])*2.0
+    elif data['unit'] == 'feet' and data['unitres'] == 'feet':
+        data['res'] = float(data['num'])*3.0
+    elif data['unit'] == 'feet' and data['unitres'] == 'yards':
+        data['res'] = float(data['num'])*4.0
+    elif data['unit'] == 'feet' and data['unitres'] == 'leagues':
+        data['res'] = float(data['num'])*5.0
+
+    elif data['unit'] == 'yards' and data['unitres'] == 'meters':
+        data['res'] = float(data['num'])*5.0
+    elif data['unit'] == 'yards' and data['unitres'] == 'inches':
+        data['res'] = float(data['num'])*2.0
+    elif data['unit'] == 'yards' and data['unitres'] == 'feet':
+        data['res'] = float(data['num'])*3.0
+    elif data['unit'] == 'yards' and data['unitres'] == 'yards':
+        data['res'] = float(data['num'])*4.0
+    elif data['unit'] == 'yards' and data['unitres'] == 'leagues':
+        data['res'] = float(data['num'])*5.0
+
+    elif data['unit'] == 'leagues' and data['unitres'] == 'meters':
+        data['res'] = float(data['num'])*5.0
+    elif data['unit'] == 'leagues' and data['unitres'] == 'inches':
+        data['res'] = float(data['num'])*2.0
+    elif data['unit'] == 'leagues' and data['unitres'] == 'feet':
+        data['res'] = float(data['num'])*3.0
+    elif data['unit'] == 'leagues' and data['unitres'] == 'yards':
+        data['res'] = float(data['num'])*4.0
+    elif data['unit'] == 'leagues' and data['unitres'] == 'leagues':
         data['res'] = float(data['num'])*5.0
 
     return  render_template('dataconfig2.html', data=data)
@@ -72,7 +128,43 @@ def index():
 
 @app.route('/energy/ev_to_joules_json', endpoint='ev_to_joules_json')
 def index():
-    return  render_template('json/ev_to_joules.json')
+    return  render_template('json/energy/ev_to_joules.json')
+
+"""meters"""
+
+@app.route('/distance/meters_to_inches_json', endpoint='meters_to_inches_json')
+def index():
+    return  render_template('json/distance/meters_to_inches.json')
+
+@app.route('/distance/meters_to_feet_json', endpoint='meters_to_feet_json')
+def index():
+    return  render_template('json/distance/meters_to_feet.json')
+
+@app.route('/distance/meters_to_yards_json', endpoint='meters_to_yards_json')
+def index():
+    return  render_template('json/distance/meters_to_yards.json')
+
+@app.route('/distance/meters_to_leagues_json', endpoint='meters_to_leagues_json')
+def index():
+    return  render_template('json/distance/meters_to_leagues.json')
+
+"""inches"""
+
+@app.route('/distance/inches_to_meters_json', endpoint='inches_to_meters_json')
+def index():
+    return  render_template('json/distance/inches_to_meters.json')
+
+@app.route('/distance/inches_to_feet_json', endpoint='inches_to_feet_json')
+def index():
+    return  render_template('json/distance/inches_to_feet.json')
+
+@app.route('/distance/inches_to_yards_json', endpoint='inches_to_yards_json')
+def index():
+    return  render_template('json/distance/inches_to_yards.json')
+
+@app.route('/distance/inches_to_leagues_json', endpoint='inches_to_leagues_json')
+def index():
+    return  render_template('json/distance/inches_to_leagues.json')
 
 #add.app_url_rule('/', view_func=View.as_view('main'), methods=['GET','POST'])
 
