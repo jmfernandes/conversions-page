@@ -42,9 +42,9 @@ def handle_data():
     try:
         val = float(data['num'])
     except:
-        foo = 'pumpernickel'
+        data['num'] = 100
     #modify data['num'] with json data
-    if data['unit'] == 'meters' and data['unitres'] == 'meters' and foo != 'pumpernickel':
+    if data['unit'] == 'meters' and data['unitres'] == 'meters':
         data['res'] = float(data['num'])*1.0
     elif data['unit'] == 'meters' and data['unitres'] == 'inches':
         json_file = open('templates/json/distance/meters_to_inches.json')
