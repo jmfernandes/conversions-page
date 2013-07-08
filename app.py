@@ -39,12 +39,14 @@ def handle_data():
     data['num'] = request.form.get('number',None)
     data['unit'] = request.form.get('units',None)
     data['unitres'] = request.form.get('resultunit',None)
+    yolo = 5
     try:
         val = float(data['num'])
     except:
         data['num'] = 100
+        yolo = 6
     #modify data['num'] with json data
-    if data['unit'] == 'meters' and data['unitres'] == 'meters':
+    if data['unit'] == 'meters' and data['unitres'] == 'meters' and yolo == 5:
         data['res'] = float(data['num'])*1.0
     elif data['unit'] == 'meters' and data['unitres'] == 'inches':
         json_file = open('templates/json/distance/meters_to_inches.json')
