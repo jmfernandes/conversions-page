@@ -42,122 +42,127 @@ def handle_data():
     try:
         val = float(data['num'])
     except:
-        data['num'] = 99.999
-    #modify data['num'] with json data
-    if data['unit'] == 'meters' and data['unitres'] == 'meters':
-        data['res'] = float(data['num'])*1.0
-    elif data['unit'] == 'meters' and data['unitres'] == 'inches':
-        json_file = open('templates/json/distance/meters_to_inches.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'meters' and data['unitres'] == 'feet':
-        json_file = open('templates/json/distance/meters_to_feet.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'meters' and data['unitres'] == 'yards':
-        json_file = open('templates/json/distance/meters_to_yards.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'meters' and data['unitres'] == 'leagues':
-        json_file = open('templates/json/distance/meters_to_leagues.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
+        foo = 'pumpernickel'
+    #if/else statement only executes the math if the user entered a number in the field.
+    if foo == 'pumpernickel':
+        data['num'] = 'enter a number'
+        data['unitres'] = 'result appears here'
+    else:
+        #modify data['num'] with json data
+        if data['unit'] == 'meters' and data['unitres'] == 'meters':
+            data['res'] = float(data['num'])*1.0
+        elif data['unit'] == 'meters' and data['unitres'] == 'inches':
+            json_file = open('templates/json/distance/meters_to_inches.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'meters' and data['unitres'] == 'feet':
+            json_file = open('templates/json/distance/meters_to_feet.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'meters' and data['unitres'] == 'yards':
+            json_file = open('templates/json/distance/meters_to_yards.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'meters' and data['unitres'] == 'leagues':
+            json_file = open('templates/json/distance/meters_to_leagues.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
 
-    elif data['unit'] == 'inches' and data['unitres'] == 'meters':
-        json_file = open('templates/json/distance/inches_to_meters.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'inches' and data['unitres'] == 'inches':
-        data['res'] = float(data['num'])*1.0
-    elif data['unit'] == 'inches' and data['unitres'] == 'feet':
-        json_file = open('templates/json/distance/inches_to_feet.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'inches' and data['unitres'] == 'yards':
-        json_file = open('templates/json/distance/inches_to_yards.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'inches' and data['unitres'] == 'leagues':
-        json_file = open('templates/json/distance/inches_to_leagues.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'inches' and data['unitres'] == 'meters':
+            json_file = open('templates/json/distance/inches_to_meters.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'inches' and data['unitres'] == 'inches':
+            data['res'] = float(data['num'])*1.0
+        elif data['unit'] == 'inches' and data['unitres'] == 'feet':
+            json_file = open('templates/json/distance/inches_to_feet.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'inches' and data['unitres'] == 'yards':
+            json_file = open('templates/json/distance/inches_to_yards.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'inches' and data['unitres'] == 'leagues':
+            json_file = open('templates/json/distance/inches_to_leagues.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
 
-    elif data['unit'] == 'feet' and data['unitres'] == 'meters':
-        json_file = open('templates/json/distance/feet_to_meters.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'feet' and data['unitres'] == 'inches':
-        json_file = open('templates/json/distance/feet_to_inches.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'feet' and data['unitres'] == 'feet':
-        data['res'] = float(data['num'])*1.0
-    elif data['unit'] == 'feet' and data['unitres'] == 'yards':
-        json_file = open('templates/json/distance/feet_to_yards.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'feet' and data['unitres'] == 'leagues':
-        json_file = open('templates/json/distance/feet_to_leagues.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'feet' and data['unitres'] == 'meters':
+            json_file = open('templates/json/distance/feet_to_meters.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'feet' and data['unitres'] == 'inches':
+            json_file = open('templates/json/distance/feet_to_inches.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'feet' and data['unitres'] == 'feet':
+            data['res'] = float(data['num'])*1.0
+        elif data['unit'] == 'feet' and data['unitres'] == 'yards':
+            json_file = open('templates/json/distance/feet_to_yards.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'feet' and data['unitres'] == 'leagues':
+            json_file = open('templates/json/distance/feet_to_leagues.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
 
-    elif data['unit'] == 'yards' and data['unitres'] == 'meters':
-        json_file = open('templates/json/distance/yards_to_meters.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'yards' and data['unitres'] == 'inches':
-        json_file = open('templates/json/distance/yards_to_inches.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'yards' and data['unitres'] == 'feet':
-        json_file = open('templates/json/distance/yards_to_feet.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'yards' and data['unitres'] == 'yards':
-        data['res'] = float(data['num'])*1.0
-    elif data['unit'] == 'yards' and data['unitres'] == 'leagues':
-        json_file = open('templates/json/distance/yards_to_leagues.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'yards' and data['unitres'] == 'meters':
+            json_file = open('templates/json/distance/yards_to_meters.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'yards' and data['unitres'] == 'inches':
+            json_file = open('templates/json/distance/yards_to_inches.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'yards' and data['unitres'] == 'feet':
+            json_file = open('templates/json/distance/yards_to_feet.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'yards' and data['unitres'] == 'yards':
+            data['res'] = float(data['num'])*1.0
+        elif data['unit'] == 'yards' and data['unitres'] == 'leagues':
+            json_file = open('templates/json/distance/yards_to_leagues.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
 
-    elif data['unit'] == 'leagues' and data['unitres'] == 'meters':
-        json_file = open('templates/json/distance/leagues_to_meters.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'leagues' and data['unitres'] == 'inches':
-        json_file = open('templates/json/distance/leagues_to_inches.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'leagues' and data['unitres'] == 'feet':
-        json_file = open('templates/json/distance/leagues_to_feet.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'leagues' and data['unitres'] == 'yards':
-        json_file = open('templates/json/distance/leagues_to_yards.json')
-        jsondata = json.load(json_file)
-        json_file.close()
-        data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'leagues' and data['unitres'] == 'leagues':
-        data['res'] = float(data['num'])*1.0
+        elif data['unit'] == 'leagues' and data['unitres'] == 'meters':
+            json_file = open('templates/json/distance/leagues_to_meters.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'leagues' and data['unitres'] == 'inches':
+            json_file = open('templates/json/distance/leagues_to_inches.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'leagues' and data['unitres'] == 'feet':
+            json_file = open('templates/json/distance/leagues_to_feet.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'leagues' and data['unitres'] == 'yards':
+            json_file = open('templates/json/distance/leagues_to_yards.json')
+            jsondata = json.load(json_file)
+            json_file.close()
+            data['res'] = float(data['num'])*float(jsondata['value'])
+        elif data['unit'] == 'leagues' and data['unitres'] == 'leagues':
+            data['res'] = float(data['num'])*1.0
 
     return  render_template('dataconfig2.html', data=data)
 
