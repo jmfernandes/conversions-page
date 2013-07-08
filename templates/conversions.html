@@ -118,23 +118,22 @@
                         <div class="row-fluid">
                             <div class="span12">
                                 <form method="post" action="http://www.conversions.datanab.net/data">
-                                <select name="maincat" id="maincat" class="menu"></select>
+                                <select class="menu" id="maincat" name="maincat"></select>
                                 <br>
                                 <input type="text" name="number" class="span3" placeholder="Type value here">
-                                    <select name="units" id="units" class="menu"></select>
-                                    </select>
+                                <select class="menu" id="units" name="units">
+                                </select>
                                 <br>
                                 <span class="help-inline"><h4>is</h4></span>
                                 <br>
                                 <input type="text" name="result" class="span3" placeholder="Result appears here">
-                                    <select name="resultunit" id="resultunit" class="menu"></select>
+                                <select class="menu" id="resultunit" name="resultunit">
+                                </select>
                                 <button id="convertbut" class="btn" type="submit" style="position:relative; bottom:-50px; right:39%;">Convert!</button>
                                 </form>
                             </div><!--/span-->
                             <div class="span6">
                             </div><!--/span-->
-                            <select name="cat" id="menu1" class="menu"></select>
-                            <select name="subcat" id="menu2" class="menu"></select>
                         </div><!--/row-->
                     </div><!--/span-->
                 </div><!--/row-->
@@ -147,6 +146,7 @@
                     Copyright &copy; Josh Fernandes 2012
                 </nav>
             </footer>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
             <script src="http://conversions.herokuapp.com/static/js/jquery.js"></script>
             <script src="http://conversions.herokuapp.com/static/js/bootstrap.js"></script>
             <script src="http://conversions.herokuapp.com/static/js/bootstrap.min.js"></script>
@@ -195,30 +195,6 @@
                                        for (var i in data[key]) {
                                        $('#units').append('<option>' + data[key][i] + '</option>');
                                        $('#resultunit').append('<option>' + data[key][i] + '</option>');
-                                       }
-                                       }).trigger('change');
-                  
-                  $(function () {
-                    
-                    var data = {
-                    "category":["sub-category"],
-                    "music": ["sub-category","rock", "punk"],
-                    "film": ["sub-categoy","comedy", "drama"],
-                    "tv": ["sub-catery","sit-com", "soap opera"],
-                    };
-                    
-                    
-                    $.each(data, function(key, value){
-                           
-                           $('#menu1').append($('<option />').text(key));
-                           });
-                    
-                    
-                    $('#menu1').change(function() {
-                                       var key = $(this).val();
-                                       $('#menu2').empty();
-                                       for (var i in data[key]) {
-                                       $('#menu2').append('<option>' + data[key][i] + '</option>');
                                        }
                                        }).trigger('change');
                 
