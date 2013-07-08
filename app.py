@@ -164,6 +164,9 @@ def handle_data():
         data['res'] = float(data['num'])*float(jsondata['value'])
     elif data['unit'] == 'leagues' and data['unitres'] == 'leagues' and trigger == 5:
         data['res'] = float(data['num'])*1.0
+    
+    elif data['unit'] == 'pogosticks' and data['unitres'] == 'meters' and trigger == 5:
+        data['res'] = 9999.9999
 
     data['res'] = round_sig(data['res'], 6)
     return  render_template('dataconfig2.html', data=data)
