@@ -30,15 +30,11 @@ def page_not_found(error):
 @app.route('/')
 def index():
     global foo
-    foo = request.form.get('units',None)
+    foo = 'cgeese'
     return  render_template('conversions.html')
 
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
-    try:
-        val = float(foo)
-    except:
-        foo = 99.999
     data = {'num':0, 'unit':'', 'unitres':foo, 'res':''}
     data['num'] = request.form.get('number',None)
     data['unit'] = request.form.get('units',None)
