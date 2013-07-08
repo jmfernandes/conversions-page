@@ -118,10 +118,10 @@
                         <div class="row-fluid">
                             <div class="span12">
                                 <form method="post" action="http://www.conversions.datanab.net/data">
-                                    <select class="span3" id="maincat" name="maincat" class="menu"></select>
+                                    <select class="span3" id="maincat" name="maincat">
                                 <br>
                                     <input type="text" name="number" class="span3" value="{{data['num']}}">
-                                    <select class="span2" id="units" name="units" class="menu">
+                                    <select class="span2" id="units" name="units">
                                         <option value='meters'>meters</option>
                                         <option value='inches'>inches</option>
                                         <option value='feet'>feet</option>
@@ -132,7 +132,7 @@
                                 <span class="help-inline"><h4>is</h4></span>
                                 <br>
                                     <input type="text" name="result" class="span3" value="{{data['res']}}" >
-                                    <select class="span2" id="resultunit" name="resultunit" class="menu">
+                                    <select class="span2" id="resultunit" name="resultunit">
                                         <option value='meters'>meters</option>
                                         <option value='inches'>inches</option>
                                         <option value='feet'>feet</option>
@@ -213,28 +213,26 @@
                 $(function () {
                   
                   var data = {
-                  "distance": ["meters", "inches","feet","yards","leagues"],
-                  "energy": ["joules", "eV"],
-                  "mass": ["kg", "pounds"],
+                  "category":["sub-category"],
+                  "music": ["sub-category","rock", "punk"],
+                  "film": ["sub-categoy","comedy", "drama"],
+                  "tv": ["sub-catery","sit-com", "soap opera"],
                   };
                   
                   
                   $.each(data, function(key, value){
                          
-                         $('#maincat').append($('<option />').text(key));
+                         $('#menu1').append($('<option />').text(key));
                          });
                   
                   
-                  $('#maincat').change(function() {
+                  $('#menu1').change(function() {
                                      var key = $(this).val();
-                                     $('#units').empty();
-                                     $('#resultunit').empty();
+                                     $('#menu2').empty();
                                      for (var i in data[key]) {
-                                     $('#units').append('<option>' + data[key][i] + '</option>');
-                                     $('#resultunit').append('<option>' + data[key][i] + '</option>');
+                                     $('#menu2').append('<option>' + data[key][i] + '</option>');
                                      }
                                      }).trigger('change');
-
                 
                 </script>
         </body>
