@@ -118,25 +118,16 @@
                         <div class="row-fluid">
                             <div class="span12">
                                 <form method="post" action="http://www.conversions.datanab.net/data">
+                                <select name="maincat" id="maincat" class="menu"></select>
+                                <br>
                                 <input type="text" name="number" class="span3" placeholder="Type value here">
-                                    <select class="span2" id="units" name="units">
-                                        <option value='meters'>meters</option>
-                                        <option value='inches'>inches</option>
-                                        <option value='feet'>feet</option>
-                                        <option value='yards'>yards</option>
-                                        <option value='leagues'>leagues</option>
+                                    <select name="units" id="units" class="menu"></select>
                                     </select>
                                 <br>
                                 <span class="help-inline"><h4>is</h4></span>
                                 <br>
                                 <input type="text" name="result" class="span3" placeholder="Result appears here">
-                                    <select class="span2" id="resultunit" name="resultunit">
-                                        <option value='meters'>meters</option>
-                                        <option value='inches'>inches</option>
-                                        <option value='feet'>feet</option>
-                                        <option value='yards'>yards</option>
-                                        <option value='leagues'>leagues</option>
-                                    </select>
+                                    <select name="resultunit" id="resultunit" class="menu"></select>
                                 <button id="convertbut" class="btn" type="submit" style="position:relative; bottom:-50px; right:39%;">Convert!</button>
                                 </form>
                             </div><!--/span-->
@@ -179,6 +170,32 @@
                 
                 //li with fade class
                 $("ol.fade").hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
+                
+                $(function () {
+                  
+                  var data = {
+                  "distance": ["meters", "inches","feet","yards","leagues"],
+                  "energy": ["joules", "eV"],
+                  "mass": ["kg", "pounds"],
+                  };
+                  
+                  
+                  $.each(data, function(key, value){
+                         
+                         $('#maincat').append($('<option />').text(key));
+                         });
+                  
+                  
+                  $('#maincat').change(function() {
+                                       var key = $(this).val();
+                                       $('#units').empty();
+                                       $('#resultunit').empty();
+                                       for (var i in data[key]) {
+                                       $('#units').append('<option>' + data[key][i] + '</option>');
+                                       $('#resultunit').append('<option>' + data[key][i] + '</option>');
+                                       }
+                                       }).trigger('change');
+                
                 
                 </script>
         </body>
