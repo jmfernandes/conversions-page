@@ -160,6 +160,9 @@ def handle_data():
     elif data['unit'] == 'leagues' and data['unitres'] == 'leagues':
         data['res'] = float(data['num'])*1.0
 
+    else:
+        pass
+
     return  render_template('dataconfig2.html', data=data)
 
 
