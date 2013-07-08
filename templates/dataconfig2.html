@@ -192,7 +192,7 @@
                 //var my_value = {{ data['unit'] }}a.toString();
                 var my_value = '{{ data.unit }}';
                 var my_value2 = '{{ data.unitres }}';
-                var my_value3 = 'distance';
+                var my_value3 = $('#maincat').find(":selected").text();
                 //$('#units').val(my_value);
                 
                 $('#maincat option').each(function(){
