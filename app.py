@@ -170,9 +170,12 @@ def handle_data():
         data['res'] = float(data['num'])*1.0
     
     else:
-        data['res'] = 1
+        data['res'] = "Result appears here"
 
-    data['res'] = round_sig(data['res'], 6)
+    if data['res'] == "Result appears here":
+        pass
+    else:
+        data['res'] = round_sig(data['res'], 6)
     return  render_template('dataconfig2.html', data=data)
 
 
