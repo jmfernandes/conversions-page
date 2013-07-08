@@ -45,7 +45,7 @@ def handle_data():
         data['num'] = 100
         foo = 'pumpernickel'
     #modify data['num'] with json data
-    if data['unit'] == 'meters' and data['unitres'] == 'meters' and foo != pumpernickel:
+    if data['unit'] == 'meters' and data['unitres'] == 'meters' and foo == 'pumpernickel':
         data['res'] = float(data['num'])*1.0
     elif data['unit'] == 'meters' and data['unitres'] == 'inches':
         json_file = open('templates/json/distance/meters_to_inches.json')
@@ -159,9 +159,6 @@ def handle_data():
         data['res'] = float(data['num'])*float(jsondata['value'])
     elif data['unit'] == 'leagues' and data['unitres'] == 'leagues':
         data['res'] = float(data['num'])*1.0
-
-    else:
-        pass
 
     return  render_template('dataconfig2.html', data=data)
 
