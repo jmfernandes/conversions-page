@@ -185,9 +185,14 @@
                 //li with fade class
                 $("ol.fade").hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
                 
-                
+                var conceptName = $('#maincat').find(":selected").text();
                 var my_value = 'energy'
-                if $("#maincat option:selected"); == my_value) {
+                $('#maincat option').each(function(){
+                    var $this = $(this);
+                    if ($this.val() == conceptName) { // if this option's value is equal to our value
+
+                    
+                    
                     var newOptions = {"kg": "kg",
                     "pounds": "pounds",
                     "ounces": "ounces"
@@ -199,6 +204,8 @@
                     $el.append($("<option></option>")
                     .attr("value", value).text(key));
                     });
+                    return false; // break the loop, no need to look further
+                    }
                 });
                 
                 </script>
