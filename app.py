@@ -43,7 +43,8 @@ def handle_data():
     try:
         val = float(data['num'])
     except:
-        data['num'] = 100
+        data['num'] = 'Type value here'
+        data['res'] = 'Result appears here'
         yolo = 6
     #modify data['num'] with json data
     if data['unit'] == 'meters' and data['unitres'] == 'meters' and yolo == 5:
