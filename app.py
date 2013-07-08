@@ -43,7 +43,7 @@ def handle_data():
     try:
         val = float(data['num'])
     except:
-        data['num'] = 'Type value here'
+        data['num'] = "Type value here"
         data['res'] = 'Result appears here'
         yolo = 6
     #modify data['num'] with json data
