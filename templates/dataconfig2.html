@@ -118,6 +118,10 @@
                         <div class="row-fluid">
                             <div class="span12">
                                 <form method="post" action="http://www.conversions.datanab.net/data">
+                                    <select class="span3" id="maincat" name="maincat">
+                                        <option value='distance'>Convert Distances</option>
+                                    </select>
+                                    <br>
                                     <input type="text" name="number" class="span3" value="{{data['num']}}">
                                     <select class="span2" id="units" name="units">
                                         <option value='meters'>meters</option>
@@ -171,7 +175,18 @@
                 //var my_value = {{ data['unit'] }}a.toString();
                 var my_value = '{{ data.unit }}';
                 var my_value2 = '{{ data.unitres }}';
+                var my_value3 = 'distance';
                 //$('#units').val(my_value);
+                
+                $('#maincat option').each(function(){
+                                        var $this = $(this); // cache the this jQuery object to avoid overhead
+                                        
+                                        if ($this.val() == my_value3) { // if this option's value is equal to our value
+                                        $this.prop('selected', true); // select this option
+                                        return false; // break the loop, no need to look further
+                                        }
+                                        });
+                
                 
                 $('#units option').each(function(){
                     var $this = $(this); // cache the this jQuery object to avoid overhead
