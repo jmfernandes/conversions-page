@@ -38,10 +38,11 @@ def index():
 
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
-    data = {'num':0, 'unit':'', 'unitres':foo, 'res':''}
+    data = {'num':0, 'unit':'', 'unitres':foo, 'res':'', 'mainunit':''}
     data['num'] = request.form.get('number',None)
     data['unit'] = request.form.get('units',None)
     data['unitres'] = request.form.get('resultunit',None)
+    data['mainunit'] = request.form.get('maincat',None)
     trigger = 5
     try:
         val = float(data['num'])
