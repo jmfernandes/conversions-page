@@ -1,6 +1,7 @@
 import os
 #import json
 from flask import Flask, render_template, json, request
+from math import log10, floor
 
 
 app = Flask(__name__)
@@ -22,6 +23,8 @@ app.secret_key="cheese"
 #                    return render_template('conversions.html')
 #            first = request.form['first']
 
+def round_sig(x, sig=2):
+    return round(x, sig-int(floor(log10(x)))-1)
 
 @app.errorhandler(404)
 def page_not_found(error):
@@ -162,6 +165,7 @@ def handle_data():
     elif data['unit'] == 'leagues' and data['unitres'] == 'leagues' and trigger == 5:
         data['res'] = float(data['num'])*1.0
 
+    data['res'] = round_sig(data['res'], 3)
     return  render_template('dataconfig2.html', data=data)
 
 
