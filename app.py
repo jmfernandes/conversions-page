@@ -36,7 +36,8 @@ def index():
     foo = request.form.get('units',None)
     data = {'num':0, 'unit':'', 'unitres':foo, 'res':'', 'mainunit':''}
     data['mainunit'] = request.form.get('maincat',None)
-    return  render_template('conversions.html',data=data)
+    options = {"kg": "kg","pounds": "pounds","ounces": "ounces"};
+    return  render_template('conversions.html',data=data,options=options)
 
 @app.route('/data', methods =['GET','POST'])
 def handle_data():

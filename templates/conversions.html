@@ -187,16 +187,8 @@
                 
                 var conceptName = $('#maincat').find(":selected").text();
                 var my_value = 'energy'
-                $('#maincat option:selected').each(function(){
-                    var $this = $(this);
-                    if ($this.val() == my_value) { // if this option's value is equal to our value
-
-                    
-                    
-                    var newOptions = {"kg": "kg",
-                    "pounds": "pounds",
-                    "ounces": "ounces"
-                    };
+                
+                    var newOptions = '{{options}}';
                 
                     var $el = $("#units");
                     $el.empty(); // remove old options
@@ -204,9 +196,8 @@
                     $el.append($("<option></option>")
                     .attr("value", value).text(key));
                     });
-                    return false; // break the loop, no need to look further
-                    }
-                });
+                   
+                
                 
                 </script>
         </body>
