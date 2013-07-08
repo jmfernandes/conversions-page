@@ -170,6 +170,19 @@
                                   });
             </script>
             <script>
+                var newOptions = {"meters": "meters",
+                    "inches": "inches",
+                    "feet": "feet",
+                    "yards": "yards",
+                    "leagues": "leagues"
+                };
+                
+                var $el = $("#units");
+                $el.empty(); // remove old options
+                $.each(newOptions, function(key, value) {
+                       $el.append($("<option></option>")
+                                  .attr("value", value).text(key));
+                       });
                 //var {{ data['unit'] }}a = {{ data['unit'] }};
                 //var {{ data['unit'] }} = {{ data['unit'] }}.toString();
                 //var my_value = {{ data['unit'] }}a.toString();
@@ -221,19 +234,6 @@
                 //li with fade class
                 $("ol.fade").hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
                 
-                var newOptions = {"meters": "meters",
-                    "inches": "inches",
-                    "feet": "feet",
-                    "yards": "yards",
-                    "leagues": "leagues"
-                };
-                
-                var $el = $("#units");
-                $el.empty(); // remove old options
-                $.each(newOptions, function(key, value) {
-                       $el.append($("<option></option>")
-                                  .attr("value", value).text(key));
-                       });
 
                 
                 </script>
