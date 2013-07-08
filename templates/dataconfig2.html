@@ -118,10 +118,6 @@
                         <div class="row-fluid">
                             <div class="span12">
                                 <form method="post" action="http://www.conversions.datanab.net/data">
-                                    <select class="span3" id="maincat" name="maincat">
-                                        <option value='distance'>Convert Distances</option>
-                                    </select>
-                                <br>
                                     <input type="text" name="number" class="span3" value="{{data['num']}}">
                                     <select class="span2" id="units" name="units">
                                         <option value='meters'>meters</option>
@@ -209,32 +205,6 @@
                 
                 //li with fade class
                 $("ol.fade").hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
-                
-                //makes it so different categories can be shown
-                
-                $(function () {
-                  
-                  var data = {
-                  "category":["sub-category"],
-                  "music": ["sub-category","rock", "punk"],
-                  "film": ["sub-categoy","comedy", "drama"],
-                  "tv": ["sub-catery","sit-com", "soap opera"],
-                  };
-                  
-                  
-                  $.each(data, function(key, value){
-                         
-                         $('#menu1').append($('<option />').text(key));
-                         });
-                  
-                  
-                  $('#menu1').change(function() {
-                                     var key = $(this).val();
-                                     $('#menu2').empty();
-                                     for (var i in data[key]) {
-                                     $('#menu2').append('<option>' + data[key][i] + '</option>');
-                                     }
-                                     }).trigger('change');
                 
                 </script>
         </body>
