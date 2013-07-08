@@ -165,7 +165,7 @@ def handle_data():
     elif data['unit'] == 'leagues' and data['unitres'] == 'leagues' and trigger == 5:
         data['res'] = float(data['num'])*1.0
 
-    data['res'] = round_sig(data['res'], 3)
+    data['res'] = round_sig(data['res'], 6)
     return  render_template('dataconfig2.html', data=data)
 
 
