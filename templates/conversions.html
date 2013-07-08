@@ -187,9 +187,8 @@
                 
                 var conceptName = $('#maincat').find(":selected").text();
                 var my_value = 'energy'
-                $('#maincat option:selected').each(function(){
-                    var $this = $(this);
-                    if ($this.val() == my_value) { // if this option's value is equal to our value
+                
+                    if  '{{ data.mainunit }}'; == my_value) { // if this option's value is equal to our value
 
                     
                     
@@ -206,7 +205,7 @@
                     });
                     return false; // break the loop, no need to look further
                     }
-                });
+                
                 
                 </script>
         </body>

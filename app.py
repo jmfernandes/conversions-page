@@ -34,7 +34,9 @@ def page_not_found(error):
 def index():
     global foo
     foo = request.form.get('units',None)
-    return  render_template('conversions.html')
+    data = {'num':0, 'unit':'', 'unitres':foo, 'res':'', 'mainunit':''}
+    data['mainunit'] = request.form.get('maincat',None)
+    return  render_template('conversions.html',data=data)
 
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
