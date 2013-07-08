@@ -120,6 +120,7 @@
                                 <form method="post" action="http://www.conversions.datanab.net/data">
                                     <select class="span3" id="maincat" name="maincat">
                                         <option value='distance'>Convert Distances</option>
+                                        <option value='energy'>Convert Energy</option>
                                     </select> 
                                 <br>
                                 <input type="text" name="number" class="span3" placeholder="Type value here">
@@ -183,6 +184,22 @@
                 
                 //li with fade class
                 $("ol.fade").hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
+                
+                
+                var my_value = 'distance'
+                if $("#maincat option:selected"); == my_value) {
+                    var newOptions = {"kg": "kg",
+                    "pounds": "pounds",
+                    "ounces": "ounces"
+                    };
+                
+                    var $el = $("#units");
+                    $el.empty(); // remove old options
+                    $.each(newOptions, function(key, value) {
+                    $el.append($("<option></option>")
+                    .attr("value", value).text(key));
+                    });
+                });
                 
                 </script>
         </body>
