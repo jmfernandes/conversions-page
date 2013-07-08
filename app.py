@@ -30,7 +30,7 @@ def page_not_found(error):
 @app.route('/')
 def index():
     global foo
-    foo = 'cgeese'
+    foo = request.form.get('units',None)
     return  render_template('conversions.html')
 
 @app.route('/data', methods =['GET','POST'])
@@ -39,6 +39,10 @@ def handle_data():
     data['num'] = request.form.get('number',None)
     data['unit'] = request.form.get('units',None)
     data['unitres'] = request.form.get('resultunit',None)
+    try:
+        val = float(data['num'])
+    except:
+        data['num'] = 99.999
     #modify data['num'] with json data
     if data['unit'] == 'meters' and data['unitres'] == 'meters':
         data['res'] = float(data['num'])*1.0
