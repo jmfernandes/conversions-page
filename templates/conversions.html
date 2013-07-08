@@ -133,6 +133,8 @@
                             </div><!--/span-->
                             <div class="span6">
                             </div><!--/span-->
+                            <select name="cat" id="menu1" class="menu"></select>
+                            <select name="subcat" id="menu2" class="menu"></select>
                         </div><!--/row-->
                     </div><!--/span-->
                 </div><!--/row-->
@@ -193,6 +195,30 @@
                                        for (var i in data[key]) {
                                        $('#units').append('<option>' + data[key][i] + '</option>');
                                        $('#resultunit').append('<option>' + data[key][i] + '</option>');
+                                       }
+                                       }).trigger('change');
+                  
+                  $(function () {
+                    
+                    var data = {
+                    "category":["sub-category"],
+                    "music": ["sub-category","rock", "punk"],
+                    "film": ["sub-categoy","comedy", "drama"],
+                    "tv": ["sub-catery","sit-com", "soap opera"],
+                    };
+                    
+                    
+                    $.each(data, function(key, value){
+                           
+                           $('#menu1').append($('<option />').text(key));
+                           });
+                    
+                    
+                    $('#menu1').change(function() {
+                                       var key = $(this).val();
+                                       $('#menu2').empty();
+                                       for (var i in data[key]) {
+                                       $('#menu2').append('<option>' + data[key][i] + '</option>');
                                        }
                                        }).trigger('change');
                 
