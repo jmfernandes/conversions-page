@@ -188,7 +188,7 @@
                 var conceptName = $('#maincat').find(":selected").text();
                 var my_value = 'energy'
                 
-                var newOptions = {{options}};
+                var newOptions = {'{{options.kg}}': "kg","pounds": "pounds","ounces": "ounces"};
                 
                     var $el = $("#units");
                     $el.empty(); // remove old options

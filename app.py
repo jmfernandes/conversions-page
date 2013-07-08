@@ -36,7 +36,7 @@ def index():
     foo = request.form.get('units',None)
     data = {'num':0, 'unit':'', 'unitres':foo, 'res':'', 'mainunit':''}
     data['mainunit'] = request.form.get('maincat',None)
-    options = {"kg": "kg","pounds": "pounds","ounces": "ounces"};
+    options = {"krg": "kgg","pounds": "pounds","ounces": "ounces"};
     return  render_template('conversions.html',data=data,options=options)
 
 @app.route('/data', methods =['GET','POST'])
@@ -172,10 +172,16 @@ def handle_data():
     else:
         data['res'] = "Result appears here"
 
+
+    """rounds the numbers to 6 significant figures, unless not a number was entered"""
+
     if data['res'] == "Result appears here":
         pass
     else:
         data['res'] = round_sig(data['res'], 6)
+
+    """return the webpage"""
+
     return  render_template('dataconfig2.html', data=data)
 
 
