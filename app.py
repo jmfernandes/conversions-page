@@ -35,6 +35,10 @@ def index():
 
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
+    try:
+        val = float(foo)
+    except:
+        foo = 99.999
     data = {'num':0, 'unit':'', 'unitres':foo, 'res':''}
     data['num'] = request.form.get('number',None)
     data['unit'] = request.form.get('units',None)
