@@ -54,12 +54,6 @@ def handle_data():
         data['res'] = "Result appears here"
         trigger = 6
     #modify data['num'] with json data
-    
-            
-    """Distance"""
-            
-            
-    #meters
     if data['unit'] == 'meters' and data['unitres'] == 'meters' and trigger == 5:
         data['res'] = float(data['num'])*1.0
     elif data['unit'] == 'meters' and data['unitres'] == 'inches' and trigger == 5:
@@ -82,8 +76,6 @@ def handle_data():
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-
-    #inches
 
     elif data['unit'] == 'inches' and data['unitres'] == 'meters' and trigger == 5:
         json_file = open('templates/json/distance/inches_to_meters.json')
@@ -108,8 +100,6 @@ def handle_data():
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
 
-    #feet
-
     elif data['unit'] == 'feet' and data['unitres'] == 'meters' and trigger == 5:
         json_file = open('templates/json/distance/feet_to_meters.json')
         jsondata = json.load(json_file)
@@ -132,8 +122,6 @@ def handle_data():
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-
-    #yards
 
     elif data['unit'] == 'yards' and data['unitres'] == 'meters' and trigger == 5:
         json_file = open('templates/json/distance/yards_to_meters.json')
@@ -158,8 +146,6 @@ def handle_data():
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
 
-    #leagues
-
     elif data['unit'] == 'leagues' and data['unitres'] == 'meters' and trigger == 5:
         json_file = open('templates/json/distance/leagues_to_meters.json')
         jsondata = json.load(json_file)
@@ -182,25 +168,13 @@ def handle_data():
         data['res'] = float(data['num'])*float(jsondata['value'])
     elif data['unit'] == 'leagues' and data['unitres'] == 'leagues' and trigger == 5:
         data['res'] = float(data['num'])*1.0
-
-
-    """Energy"""
-
-
-    #eV
-
-    #Joules
-
-
-    #Calories
-
-
-    #if not a number
+    
     else:
         data['res'] = "Result appears here"
 
 
-    #rounds the numbers to 6 significant figures, unless not a number was entered
+    """rounds the numbers to 6 significant figures, unless not a number was entered"""
+
     if data['res'] == "Result appears here":
         pass
     else:
