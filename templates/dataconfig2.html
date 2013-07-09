@@ -171,31 +171,6 @@
                                   });
             </script>
             <script>
-                //right now this deletes the options and replaces them
-                //i need to work in an if statement so it only does it
-                //when i change to energy
-                //var newOptions = {"meters": "meters",
-                //    "inches": "inches",
-                //    "feet": "feet",
-                //    "yards": "yards",
-                //    "leagues": "leagues"
-                //};
-                
-                //var $el = $("#units");
-                //$el.empty(); // remove old options
-                //$.each(newOptions, function(key, value) {
-                //       $el.append($("<option></option>")
-                //                  .attr("value", value).text(key));
-                //       });
-                //var {{ data['unit'] }}a = {{ data['unit'] }};
-                //var {{ data['unit'] }} = {{ data['unit'] }}.toString();
-                //var my_value = {{ data['unit'] }}a.toString();
-                var my_value = '{{ data.unit }}';
-                var my_value2 = '{{ data.unitres }}';
-                var my_value3 = '{{ data.mainunit }}';
-                //$('#units').val(my_value);
-                
-                
                 $("#maincat").change(function(){
                                      if( this.options[this.selectedIndex].id == 'distance') {
                                      var newOptions = {"meters": "meters","inches": "inches","feet": "feet","yards":"yards","leagues":"leagues"};
@@ -217,6 +192,10 @@
                                                        .attr("value", value).text(key));
                                             });
                                      })
+                
+                var my_value = '{{ data.unit }}';
+                var my_value2 = '{{ data.unitres }}';
+                var my_value3 = '{{ data.mainunit }}';
                 
                 $('#maincat option').each(function(){
                                         var $this = $(this); // cache the this jQuery object to avoid overhead
