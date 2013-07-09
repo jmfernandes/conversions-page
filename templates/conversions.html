@@ -119,8 +119,8 @@
                             <div class="span12">
                                 <form method="post" action="http://www.conversions.datanab.net/data">
                                     <select class="span3" id="maincat" name="maincat">
-                                        <option value='distance'>Convert Distances</option>
-                                        <option value='energy'>Convert Energy</option>
+                                        <option id='distance' value='distance'>Convert Distances</option>
+                                        <option id='energy' value='energy'>Convert Energy</option>
                                     </select> 
                                 <br>
                                 <input type="text" name="number" class="span3" placeholder="Type value here">
@@ -190,10 +190,10 @@
                 
                 $("#maincat").change(function(){
                 if( this.options[this.selectedIndex].id == 'distance') {
-                    var newOptions = {"kg": "kg","pounds": "pounds","ounces": "ounces"};
+                    var newOptions = {"meters": "meters","inches": "inches","feet": "feet","yards":"yards","leagues":"leagues"};
                 }
                 else {
-                    var newOptions = {"pounds": "pounds","stuff": "stuff"};
+                    var newOptions = {"eV": "eV","Joules": "Joules","calories": "calories"};
                 }
                     var $el = $("#units");
                     $el.empty(); // remove old options
