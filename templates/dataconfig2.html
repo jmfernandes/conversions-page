@@ -210,7 +210,7 @@
                 $('#units option').each(function(){
                     var $this = $(this); // cache the this jQuery object to avoid overhead
                 
-                    if ($this.val() == my_value) { // if this option's value is equal to our value
+                    if ($this.val() == this.options[this.selectedIndex].id) { // if this option's value is equal to our value
                         $this.prop('selected', true); // select this option
                         return false; // break the loop, no need to look further
                         }
