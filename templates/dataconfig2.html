@@ -197,24 +197,7 @@
                 var my_value2 = '{{ data.unitres }}';
                 var my_value3 = '{{ data.mainunit }}';
                 
-                $('#maincat option').each(function(){
-                                        var $this = $(this); // cache the this jQuery object to avoid overhead
-                                        
-                                        if ($this.val() == my_value3) { // if this option's value is equal to our value
-                                        $this.prop('selected', true); // select this option
-                                        return false; // break the loop, no need to look further
-                                        }
-                                        });
                 
-                
-                $('#units option').each(function(){
-                    var $this = $(this); // cache the this jQuery object to avoid overhead
-                
-                    if ($this.val() == this.options[this.selectedIndex].id) { // if this option's value is equal to our value
-                        $this.prop('selected', true); // select this option
-                        return false; // break the loop, no need to look further
-                        }
-                        });
                 
                 $('#resultunit option').each(function(){
                                         var $this = $(this); // cache the this jQuery object to avoid overhead
