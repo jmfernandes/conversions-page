@@ -188,8 +188,13 @@
                 var conceptName = $('#maincat').find(":selected").text();
                 var my_value = 'energy'
                 
-                var newOptions = {'{{options.kg}}': "kg","pounds": "pounds","ounces": "ounces"};
                 
+                if( conceptName == 'distance') {
+                    var newOptions = {"kg": "kg","pounds": "pounds","ounces": "ounces"};
+                }
+                else {
+                    var newOptions = {"pounds": "pounds","stuff": "stuff"};
+                }
                     var $el = $("#units");
                     $el.empty(); // remove old options
                     $.each(newOptions, function(key, value) {

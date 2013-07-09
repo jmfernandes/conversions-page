@@ -36,7 +36,7 @@ def index():
     foo = request.form.get('units',None)
     data = {'num':0, 'unit':'', 'unitres':foo, 'res':'', 'mainunit':''}
     data['mainunit'] = request.form.get('maincat',None)
-    options = {"krg": "kgg","pounds": "pounds","ounces": "ounces"};
+    options = 'cheese';
     return  render_template('conversions.html',data=data,options=options)
 
 @app.route('/data', methods =['GET','POST'])
