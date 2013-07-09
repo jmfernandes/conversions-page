@@ -194,7 +194,7 @@
                                      })
                 
                 $("#units").change(function(){
-                                     if( this.options[this.selectedIndex].id == 'meters') {
+                                     if( this.options[this.selectedIndex].id == 'meters' or this.options[this.selectedIndex].id == 'inches' or this.options[this.selectedIndex].id == 'feet' or this.options[this.selectedIndex].id == 'yards' or this.options[this.selectedIndex].id == 'leagues') {
                                      var newOptions = {"meters": "meters","inches": "inches","feet": "feet","yards":"yards","leagues":"leagues"};
                                      }
                                      else {
