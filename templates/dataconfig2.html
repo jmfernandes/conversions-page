@@ -171,6 +171,27 @@
                                   });
             </script>
             <script>
+                $("#maincat").change(function(){
+                if( this.options[this.selectedIndex].id == 'distance') {
+                var newOptions = {"meters": "meters","inches": "inches","feet": "feet","yards":"yards","leagues":"leagues"};
+                }
+                else {
+                var newOptions = {"eV": "eV","Joules": "Joules","calories": "calories"};
+                }
+                var $el = $("#units");
+                $el.empty(); // remove old options
+                $.each(newOptions, function(key, value) {
+                $el.append($("<option></option>")
+                .attr("value", value).text(key));
+                });
+                                     
+                var $el = $("#resultunit");
+                $el.empty(); // remove old options
+                $.each(newOptions, function(key, value) {
+                $el.append($("<option></option>")
+                .attr("value", value).text(key));
+                });
+                })
                 //right now this deletes the options and replaces them
                 //i need to work in an if statement so it only does it
                 //when i change to energy
@@ -240,27 +261,7 @@
                 
                 //changes from distances to energy
                 
-                $("#maincat").change(function(){
-                if( this.options[this.selectedIndex].id == 'distance') {
-                    var newOptions = {"meters": "meters","inches": "inches","feet": "feet","yards":"yards","leagues":"leagues"};
-                }
-                else {
-                    var newOptions = {"eV": "eV","Joules": "Joules","calories": "calories"};
-                }
-                var $el = $("#units");
-                $el.empty(); // remove old options
-                $.each(newOptions, function(key, value) {
-                       $el.append($("<option></option>")
-                                  .attr("value", value).text(key));
-                       });
                 
-                var $el = $("#resultunit");
-                $el.empty(); // remove old options
-                $.each(newOptions, function(key, value) {
-                       $el.append($("<option></option>")
-                                  .attr("value", value).text(key));
-                       });
-                })
                 
 
                 
