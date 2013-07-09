@@ -125,7 +125,7 @@
                                     <br>
                                     <input type="text" name="number" class="span3" value="{{data['num']}}">
                                     <select class="span2" id="units" name="units">
-                                        <option id='meters' value='meters'>meters</option>
+                                        <option value='meters'>meters</option>
                                         <option value='inches'>inches</option>
                                         <option value='feet'>feet</option>
                                         <option value='yards'>yards</option>
@@ -193,21 +193,7 @@
                                             });
                                      })
                 
-                $("#units").change(function(){
-                                     if( this.options[this.selectedIndex].id == 'meters') {
-                                     var newOptions = {"meters": "meters","inches": "inches","feet": "feet","yards":"yards","leagues":"leagues"};
-                                     }
-                                     else {
-                                     var newOptions = {"eV": "eV","Joules": "Joules","calories": "calories"};
-                                     }
-                                     var $el = $("#units");
-                                     $el.empty(); // remove old options
-                                     $.each(newOptions, function(key, value) {
-                                            $el.append($("<option></option>")
-                                                       .attr("value", value).text(key));
-                                            });
-                                     
-                                     })
+                
                 
                 var my_value = '{{ data.unit }}';
                 var my_value2 = '{{ data.unitres }}';
