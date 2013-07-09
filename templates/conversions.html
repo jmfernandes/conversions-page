@@ -188,8 +188,8 @@
                 var conceptName = $('#maincat').find(":selected").text();
                 var my_value = 'energy'
                 
-                
-                if( conceptName == 'distance') {
+                $("#maincat").change(function(){
+                if( this.options[this.selectedIndex].id == 'distance') {
                     var newOptions = {"kg": "kg","pounds": "pounds","ounces": "ounces"};
                 }
                 else {
@@ -201,7 +201,7 @@
                     $el.append($("<option></option>")
                     .attr("value", value).text(key));
                     });
-                   
+                })
                 
                 
                 </script>
