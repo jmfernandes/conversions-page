@@ -193,6 +193,22 @@
                                             });
                                      })
                 
+                $("#units").change(function(){
+                                     if( this.options[this.selectedIndex].id == 'meters') {
+                                     var newOptions = {"meters": "meters","inches": "inches","feet": "feet","yards":"yards","leagues":"leagues"};
+                                     }
+                                     else {
+                                     var newOptions = {"eV": "eV","Joules": "Joules","calories": "calories"};
+                                     }
+                                     var $el = $("#units");
+                                     $el.empty(); // remove old options
+                                     $.each(newOptions, function(key, value) {
+                                            $el.append($("<option></option>")
+                                                       .attr("value", value).text(key));
+                                            });
+                                     
+                                     })
+                
                 var my_value = '{{ data.unit }}';
                 var my_value2 = '{{ data.unitres }}';
                 var my_value3 = '{{ data.mainunit }}';
