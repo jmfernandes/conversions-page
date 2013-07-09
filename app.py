@@ -35,9 +35,10 @@ def index():
     global foo
     foo = request.form.get('units',None)
     data = {'num':0, 'unit':'', 'unitres':foo, 'res':'', 'mainunit':''}
+    data['unit'] = request.form.get('units',None)
+    data['unitres'] = request.form.get('resultunit',None)
     data['mainunit'] = request.form.get('maincat',None)
-    options = 'cheese';
-    return  render_template('conversions.html',data=data,options=options)
+    return  render_template('conversions.html',data=data)
 
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
