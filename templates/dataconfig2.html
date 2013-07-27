@@ -184,14 +184,8 @@
                                             $el.append($("<option></option>")
                                                        .attr("value", value).text(key));
                                             });
-                                     $('#units option').each(function(){
-                                        var $this = $(this); 
-                                        if ($this.val() == 'eV') { // if this option's value is equal to our value
-                                        $this.prop('selected', true); // select this option
-                                        return false; // break the loop, no need to look further
-                                        }
-                                        });
-
+                                     
+                                     
                                      var $eli = $("#resultunit");
                                      $eli.empty(); // remove old options
                                      $.each(newOptions, function(key, value) {
