@@ -171,7 +171,7 @@
                                   });
             </script>
             <script>
-            var my_value = '{{ data.unit }}';
+            var my_value = $('input[name="units"]');
             var my_value2 = '{{ data.unitres }}';
             var my_value3 = '{{ data.mainunit }}';
                 $("#maincat").change(function(){
@@ -187,8 +187,7 @@
                                             $el.append($("<option></option>")
                                                        .attr("value", value).text(key));
                                             });
-                                     $el.val() = 'inches'
-                                     $el.prop('selected',true);
+                                     
                                      
                                      var $eli = $("#resultunit");
                                      $eli.empty(); // remove old options
@@ -197,7 +196,7 @@
                                                        .attr("value", value).text(key));
                                             });
                                      })
-            
+                
                 $('#maincat option').each(function(){
                                         var $this = $(this); // cache the this jQuery object to avoid overhead
                                         
