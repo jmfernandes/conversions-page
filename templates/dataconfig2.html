@@ -144,6 +144,7 @@
                                     </select>
                                 <button id="convertbut" class="btn" type="submit" style="position:relative; bottom:-50px; right:39%;">Convert!</button>
                                 </form>
+                                <div style="color:red"><script>document.write(produceMessage())</script></div>
                             </div><!--/span-->
                             <div class="span6">
                             </div><!--/span-->
@@ -171,6 +172,10 @@
                                   });
             </script>
             <script>
+            function produceMessage(){
+            var msg= 'Hello<br />';
+            return msg;
+            }
                 $("#maincat").change(function(){
                                      if( this.options[this.selectedIndex].id == 'distance') {
                                      var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
