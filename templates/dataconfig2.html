@@ -174,7 +174,7 @@
                 //$("#units option[value='eV']").remove();
                 var $e = document.getElementById("maincat");
                 var $strUser = $e.options[$e.selectedIndex].value;
-                if( $("#maincat").val() == $strUser) {
+                if( $("#maincat").val() == 'distance') {
                     var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
                 }
                 else {
@@ -188,28 +188,7 @@
                 .attr("value", value).text(key));
                 });
                                      
-                $("#maincat").change(function(){
-                                     if( this.options[this.selectedIndex].id == 'distance') {
-                                     var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
-                                     }
-                                     else {
-                                     var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
-                                     }
-                                     var $el = $("#units");
-                                     $el.empty(); // remove old options
-                                     $.each(newOptions, function(key, value) {
-                                            $el.append($("<option></option>")
-                                                       .attr("value", value).text(key));
-                                            });
-                                     
-                                     
-                                     var $eli = $("#resultunit");
-                                     $eli.empty(); // remove old options
-                                     $.each(newOptions, function(key, value) {
-                                            $eli.append($("<option></option>")
-                                                       .attr("value", value).text(key));
-                                            });
-                                     })
+                
 
             var my_value = '{{ data.unit }}';
             var my_value2 = '{{ data.unitres }}';
