@@ -182,13 +182,11 @@
                                      }
                                      var $el = $("#units");
                                      $el.empty(); // remove old options
+                                     $.each(newOptions, function(key, value) {
+                                            $el.append($("<option></option>")
+                                                       .attr("value", value).text(key));
+                                            });
                                      
-                                     $.each(newOptions, function(key, value) {   
-                                           $('#units')
-                                          .append($("<option></option>")
-                                          .attr("value",key)
-                                          .text(value)); 
-                                     });
                                      
                                      var $eli = $("#resultunit");
                                      $eli.empty(); // remove old options
