@@ -169,6 +169,9 @@ def handle_data():
         data['res'] = float(data['num'])*float(jsondata['value'])
     elif data['unit'] == 'leagues' and data['unitres'] == 'leagues' and trigger == 5:
         data['res'] = float(data['num'])*1.0
+
+    elif data['unit'] == 'eV' and data['unitres'] == 'eV' and trigger == 5:
+        data['res'] = float(data['num'])*1.0
     
     else:
         data['res'] = "Result appears here"
