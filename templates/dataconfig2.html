@@ -187,7 +187,8 @@
                                             $el.append($("<option></option>")
                                                        .attr("value", value).text(key));
                                             });
-                                     
+                                     $el.val() = 'inches'
+                                     $el.prop('selected',true);
                                      
                                      var $eli = $("#resultunit");
                                      $eli.empty(); // remove old options
@@ -196,7 +197,7 @@
                                                        .attr("value", value).text(key));
                                             });
                                      })
-            var my_value3 = 'feet';
+            
                 $('#maincat option').each(function(){
                                         var $this = $(this); // cache the this jQuery object to avoid overhead
                                         
