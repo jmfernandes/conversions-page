@@ -152,7 +152,7 @@
                 </div><!--/row-->
                 
                 <hr>
-            <p></p>   
+                
             </div><!--/.fluid-container-->
             <footer> <!-- site wide footer -->
                 <nav>
@@ -197,18 +197,6 @@
             var my_value = '{{ data.unit }}';
             var my_value2 = '{{ data.unitres }}';
             var my_value3 = '{{ data.mainunit }}';
-
-            function displayVals() {
-            var singleValues = $("#units").val();
-            var multipleValues = $("#resultunit").val() || [];
-             $("p").html("<b>Single:</b> " +
-                  singleValues +
-                  " <b>Multiple:</b> " +
-                  multipleValues.join(", "));
-             }
- 
-    $("select").change(displayVals);
-    displayVals();
                 
                 $('#maincat option').each(function(){
                                         var $this = $(this); // cache the this jQuery object to avoid overhead
