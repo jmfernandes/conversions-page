@@ -180,6 +180,8 @@
                                      else {
                                      var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
                                      }
+                                     var $el = $("#units");
+                                     $el.empty(); // remove old options
                                      
                                      $.each(newOptions, function(key, value) {   
                                            $('#units')
