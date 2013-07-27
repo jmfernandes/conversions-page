@@ -172,7 +172,7 @@
                                   });
             </script>
             <script>
-                $(".units option[value='eV']").remove();
+                $("#units option[value='eV']").remove();
                 $("#maincat").change(function(){
                                      if( this.options[this.selectedIndex].id == 'distance') {
                                      var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
