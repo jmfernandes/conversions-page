@@ -171,6 +171,8 @@
                                   });
             </script>
             <script>
+            var my_value = '{{ data.unit }}';
+
                 $("#maincat").change(function(){
                                      if( this.options[this.selectedIndex].id == 'distance') {
                                      var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
@@ -196,7 +198,6 @@
                                             });
                                      })
 
-            var my_value = '{{ data.unit }}';
             var my_value2 = '{{ data.unitres }}';
             var my_value3 = '{{ data.mainunit }}';
                 
