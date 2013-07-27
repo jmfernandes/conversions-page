@@ -171,6 +171,9 @@
                                   });
             </script>
             <script>
+            var my_value = '{{ data.unit }}';
+            var my_value2 = '{{ data.unitres }}';
+            var my_value3 = '{{ data.mainunit }}';
                 $("#maincat").change(function(){
                                      if( this.options[this.selectedIndex].id == 'distance') {
                                      var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
@@ -193,11 +196,6 @@
                                                        .attr("value", value).text(key));
                                             });
                                      })
-                
-                
-                var my_value = '{{ data.unit }}';
-                var my_value2 = '{{ data.unitres }}';
-                var my_value3 = '{{ data.mainunit }}';
                 
                 $('#maincat option').each(function(){
                                         var $this = $(this); // cache the this jQuery object to avoid overhead
