@@ -171,8 +171,6 @@
                                   });
             </script>
             <script>
-            var my_value = '{{ data.unit }}';
-
                 $("#maincat").change(function(){
                                      if( this.options[this.selectedIndex].id == 'distance') {
                                      var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
@@ -187,7 +185,11 @@
                                                        .attr("value", value).text(key));
                                             });
                                      $('#units option').each(function(){
-                                        var my_value = $('#units').val(); 
+                                        var $this = $(this); 
+                                        if ($this.val() == 'eV') { // if this option's value is equal to our value
+                                        $this.prop('selected', true); // select this option
+                                        return false; // break the loop, no need to look further
+                                        }
                                         });
 
                                      var $eli = $("#resultunit");
@@ -198,6 +200,7 @@
                                             });
                                      })
 
+            var my_value = '{{ data.unit }}';
             var my_value2 = '{{ data.unitres }}';
             var my_value3 = '{{ data.mainunit }}';
                 
