@@ -183,7 +183,7 @@
                                      $el.empty(); // remove old options
                                      $.each(newOptions, function(key, value) {
                                             $el.append($("<option></option>")
-                                                       .attr("value", value).text(key));
+                                                       .val(value).text(key));
                                             });
                                      
                                      
