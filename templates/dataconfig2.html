@@ -173,10 +173,10 @@
             <script>
                 $("#maincat").change(function(){
                                      if( this.options[this.selectedIndex].id == 'distance') {
-                                     var newOptions = {"meters": "meters","inches": "inches","feet": "feet","yards":"yards","leagues":"leagues"};
+                                     var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
                                      }
                                      else {
-                                     var newOptions = {"eV": "eV","Joules": "Joules","calories": "calories"};
+                                     var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
                                      }
                                      var $el = $("#units");
                                      $el.empty(); // remove old options
@@ -184,7 +184,7 @@
                                             $el.append($("<option></option>")
                                                        .attr("value", value).text(key));
                                             });
-                                     $el.prop('selected', true);
+                                     
                                      
                                      var $eli = $("#resultunit");
                                      $eli.empty(); // remove old options
