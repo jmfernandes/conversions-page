@@ -184,7 +184,11 @@
                                             $el.append($("<option></option>")
                                                        .attr("value", value).text(key));
                                             });
-                                     document.getElementsByName("units")[0].value="eV"
+                                     function SelectElement('eV')
+                                    {    
+                                      var element = document.getElementById('units');
+                                       element.value = 'eV';
+                                    }
                                      
                                      var $eli = $("#resultunit");
                                      $eli.empty(); // remove old options
