@@ -172,7 +172,9 @@
             </script>
             <script>
                 //$("#units option[value='eV']").remove();
-                if( $('#category option:selected') == 'distance') {
+                var e = document.getElementById("maincat");
+                var strUser = e.options[e.selectedIndex].value;
+                if( $('#maincat option:selected') == 'distance') {
                                      var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
                                      }
                 else {
