@@ -174,11 +174,11 @@
                 //$("#units option[value='eV']").remove();
                 var $e = document.getElementById("maincat");
                 var $strUser = $e.options[$e.selectedIndex].value;
-                if( $("#maincat").val() == 'distance') {
-                                     var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
-                                     }
+                if( $("#maincat").val() == $strUser) {
+                    var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
+                }
                 else {
-                var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
+                    var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
                 }
 
                 var $el = $("#units");
