@@ -172,6 +172,22 @@
                                   });
             </script>
             <script>
+            function displayVals() {
+                if( this.options[this.selectedIndex].id == 'distance') {
+                                     var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
+                                     }
+                                     else {
+                                     var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
+                                     }
+                                     var $el = $("#units");
+                                     $el.empty(); // remove old options
+                                     $.each(newOptions, function(key, value) {
+                                            $el.append($("<option></option>")
+                                                       .attr("value", value).text(key));
+                                            });
+            }
+            displayVals();
+
                 $("#maincat").change(function(){
                                      if( this.options[this.selectedIndex].id == 'distance') {
                                      var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
@@ -183,7 +199,7 @@
                                      $el.empty(); // remove old options
                                      $.each(newOptions, function(key, value) {
                                             $el.append($("<option></option>")
-                                                       .val(value).text(key));
+                                                       .attr("value", value).text(key));
                                             });
                                      
                                      
