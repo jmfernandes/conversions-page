@@ -203,7 +203,7 @@
 
                 var $e = document.getElementById("maincat");
                 var $strUser = $e.options[$e.selectedIndex].value;
-                if( $("#maincat").val() == 'distance') {
+                if( $("#maincat option").val() == 'distance') {
                     var myOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
                 }
                 else {
