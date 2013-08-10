@@ -201,21 +201,21 @@
                 var my_value2 = '{{ data.unitres }}';
                 var my_value3 = '{{ data.mainunit }}';
 
-                var $e = document.getElementById("maincat");
-                var $strUser = $e.options[$e.selectedIndex].value;
-                if( $("#maincat option").val() == 'distance') {
-                    var myOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
-                }
-                else {
-                    var myOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
-                }
+                //var $e = document.getElementById("maincat");
+                //var $strUser = $e.options[$e.selectedIndex].value;
+                //if( $("#maincat option").val() == 'distance') {
+                //    var myOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
+                //}
+                //else {
+                //    var myOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
+                //}
 
-                var $el = $("#units");
-                $el.empty(); // remove old options
-                $.each(myOptions, function(key, value) {
-                    $el.append($("<option></option>")
-                    .attr("value", value).text(key));
-                });
+                //var $el = $("#units");
+                //$el.empty(); // remove old options
+                //$.each(myOptions, function(key, value) {
+                //    $el.append($("<option></option>")
+                //    .attr("value", value).text(key));
+                //});
                 
                 $('#maincat option').each(function(){
                                         var $this = $(this); // cache the this jQuery object to avoid overhead
