@@ -187,7 +187,7 @@
                                             $el.append($("<option></option>")
                                                        .attr("value", value).text(key));
                                             });
-                                     
+                                     $el.prop('selected', true);
                                      
                                      var $eli = $("#resultunit");
                                      $eli.empty(); // remove old options
