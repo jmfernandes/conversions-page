@@ -187,7 +187,7 @@
                                      var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
                                      $("#maincat").val("energy");
                                      }
-
+                                     $('#printHere').html(newOptions);   
                                      var $el = $("#units");
                                      $el.empty(); // remove old options
                                      $.each(newOptions, function(key, value) {
@@ -207,7 +207,8 @@
                 
 
                 var my_value4 = $("#maincat option").val();
-                $('#printHere').html(my_value4);
+                //$('#printHere').html(my_value4);
+                //$('#printHere').html(newOptions);
 
                 //var $e = document.getElementById("maincat");
                 //var $strUser = $e.options[$e.selectedIndex].value;
