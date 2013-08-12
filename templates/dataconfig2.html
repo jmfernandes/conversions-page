@@ -174,6 +174,9 @@
             <script>
                 //$("#units option[value='eV']").remove();
                 
+                var my_value = '{{ data.unit }}';
+                var my_value2 = '{{ data.unitres }}';
+                var my_value3 = '{{ data.mainunit }}';
                                      
                 $("#maincat").change(function(){
                                      if( this.options[this.selectedIndex].id == 'distance') {
@@ -182,6 +185,14 @@
                                      else {
                                      var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
                                      }
+
+                                     var $this = $(this); // cache the this jQuery object to avoid overhead
+                                        
+                                        if ($this.val() == my_value3) { // if this option's value is equal to our value
+                                        $this.prop('selected', true); // select this option
+                                        return false; // break the loop, no need to look further
+                                        }
+
                                      var $el = $("#units");
                                      $el.empty(); // remove old options
                                      $.each(newOptions, function(key, value) {
@@ -198,9 +209,7 @@
                                             });
                                      })
 
-                var my_value = '{{ data.unit }}';
-                var my_value2 = '{{ data.unitres }}';
-                var my_value3 = '{{ data.mainunit }}';
+                
 
                 var my_value4 = $("#maincat").val();
                 $('#printHere').html(my_value4);
