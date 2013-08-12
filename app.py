@@ -946,7 +946,7 @@ def index():
 
 @app.route('/distance/astronomical_unit_to_inches_json', endpoint='astronomical_unit_to_inches_json')
 def index():
-    return  render_template('json/distance/aastronomical_unit_to_inches.json')
+    return  render_template('json/distance/astronomical_unit_to_inches.json')
 
 @app.route('/distance/astronomical_unit_to_feet_json', endpoint='astronomical_unit_to_feet_json')
 def index():
@@ -982,13 +982,171 @@ def index():
 
 
 """light years"""
+@app.route('/distance/light_years_to_meters_json', endpoint='light_years_to_meters_json')
+def index():
+    return  render_template('json/distance/light_years_to_meters.json')
+
+@app.route('/distance/light_years_to_inches_json', endpoint='light_years_to_inches_json')
+def index():
+    return  render_template('json/distance/light_years_to_inches.json')
+
+@app.route('/distance/light_years_to_feet_json', endpoint='light_years_to_feet_json')
+def index():
+    return  render_template('json/distance/light_years_to_feet.json')
+
+@app.route('/distance/light_years_to_yards_json', endpoint='light_years_to_yards_json')
+def index():
+    return  render_template('json/distance/light_years_to_yards.json')
+
+@app.route('/distance/light_years_to_leagues_json', endpoint='light_years_to_leagues_json')
+def index():
+    return  render_template('json/distance/light_years_to_leagues.json')
+
+@app.route('/distance/light_years_to_angstroms_json', endpoint='light_years_to_angstroms_json')
+def index():
+    return  render_template('json/distance/light_years_to_angstroms.json')
+
+@app.route('/distance/light_years_to_astronomical_unit_json', endpoint='light_years_to_astronomical_unit_json')
+def index():
+    return  render_template('json/distance/light_years_to_astronomical_unit.json')
+
+@app.route('/distance/light_years_to_centimeters_json', endpoint='light_years_to_centimeters_json')
+def index():
+    return  render_template('json/distance/light_years_to_centimeters.json')
+
+@app.route('/distance/light_years_to_millimeters_json', endpoint='light_years_to_millimeters_json')
+def index():
+    return  render_template('json/distance/light_years_to_millimeters.json')
+
+@app.route('/distance/light_years_to_nanometers_json', endpoint='light_years_to_nanometers_json')
+def index():
+    return  render_template('json/distance/light_years_to_nanometers.json')
+
 
 """centimeters"""
+@app.route('/distance/centimeters_to_meters_json', endpoint='centimeters_to_meters_json')
+def index():
+    return  render_template('json/distance/centimeters_to_meters.json')
+
+@app.route('/distance/centimeters_to_inches_json', endpoint='centimeters_to_inches_json')
+def index():
+    return  render_template('json/distance/centimeters_to_inches.json')
+
+@app.route('/distance/centimeters_to_feet_json', endpoint='centimeters_to_feet_json')
+def index():
+    return  render_template('json/distance/centimeters_to_feet.json')
+
+@app.route('/distance/centimeters_to_yards_json', endpoint='centimeters_to_yards_json')
+def index():
+    return  render_template('json/distance/centimeters_to_yards.json')
+
+@app.route('/distance/centimeters_to_leagues_json', endpoint='centimeters_to_leagues_json')
+def index():
+    return  render_template('json/distance/centimeters_to_leagues.json')
+
+@app.route('/distance/centimeters_to_angstroms_json', endpoint='centimeters_to_angstroms_json')
+def index():
+    return  render_template('json/distance/centimeters_to_angstroms.json')
+
+@app.route('/distance/centimeters_to_astronomical_unit_json', endpoint='centimeters_to_astronomical_unit_json')
+def index():
+    return  render_template('json/distance/centimeters_to_astronomical_unit.json')
+
+@app.route('/distance/centimeters_to_light_years_json', endpoint='centimeters_to_light_years_json')
+def index():
+    return  render_template('json/distance/centimeters_to_light_years.json')
+
+@app.route('/distance/centimeters_to_millimeters_json', endpoint='centimeters_to_millimeters_json')
+def index():
+    return  render_template('json/distance/centimeters_to_millimeters.json')
+
+@app.route('/distance/centimeters_to_nanometers_json', endpoint='centimeters_to_nanometers_json')
+def index():
+    return  render_template('json/distance/centimeters_to_nanometers.json')
+
 
 """millimeters"""
+@app.route('/distance/millimeters_to_meters_json', endpoint='millimeters_to_meters_json')
+def index():
+    return  render_template('json/distance/millimeters_to_meters.json')
+
+@app.route('/distance/millimeters_to_inches_json', endpoint='millimeters_to_inches_json')
+def index():
+    return  render_template('json/distance/millimeters_to_inches.json')
+
+@app.route('/distance/millimeters_to_feet_json', endpoint='millimeters_to_feet_json')
+def index():
+    return  render_template('json/distance/millimeters_to_feet.json')
+
+@app.route('/distance/millimeters_to_yards_json', endpoint='millimeters_to_yards_json')
+def index():
+    return  render_template('json/distance/millimeters_to_yards.json')
+
+@app.route('/distance/millimeters_to_leagues_json', endpoint='millimeters_to_leagues_json')
+def index():
+    return  render_template('json/distance/millimeters_to_leagues.json')
+
+@app.route('/distance/millimeters_to_angstroms_json', endpoint='millimeters_to_angstroms_json')
+def index():
+    return  render_template('json/distance/millimeters_to_angstroms.json')
+
+@app.route('/distance/millimeters_to_astronomical_unit_json', endpoint='millimeters_to_astronomical_unit_json')
+def index():
+    return  render_template('json/distance/millimeters_to_astronomical_unit.json')
+
+@app.route('/distance/millimeters_to_light_years_json', endpoint='millimeters_to_light_years_json')
+def index():
+    return  render_template('json/distance/millimeters_to_light_years.json')
+
+@app.route('/distance/millimeters_to_centimeters_json', endpoint='millimeters_to_centimeters_json')
+def index():
+    return  render_template('json/distance/millimeters_to_centimeters.json')
+
+@app.route('/distance/millimeters_to_nanometers_json', endpoint='millimeters_to_nanometers_json')
+def index():
+    return  render_template('json/distance/millimeters_to_nanometers.json')
+
 
 """nanometers"""
+@app.route('/distance/nanometers_to_meters_json', endpoint='nanometers_to_meters_json')
+def index():
+    return  render_template('json/distance/nanometers_to_meters.json')
 
+@app.route('/distance/nanometers_to_inches_json', endpoint='nanometers_to_inches_json')
+def index():
+    return  render_template('json/distance/nanometers_to_inches.json')
+
+@app.route('/distance/nanometers_to_feet_json', endpoint='nanometers_to_feet_json')
+def index():
+    return  render_template('json/distance/nanometers_to_feet.json')
+
+@app.route('/distance/nanometers_to_yards_json', endpoint='nanometers_to_yards_json')
+def index():
+    return  render_template('json/distance/nanometers_to_yards.json')
+
+@app.route('/distance/nanometers_to_leagues_json', endpoint='nanometers_to_leagues_json')
+def index():
+    return  render_template('json/distance/nanometers_to_leagues.json')
+
+@app.route('/distance/nanometers_to_angstroms_json', endpoint='nanometers_to_angstroms_json')
+def index():
+    return  render_template('json/distance/nanometers_to_angstroms.json')
+
+@app.route('/distance/nanometers_to_astronomical_unit_json', endpoint='nanometers_to_astronomical_unit_json')
+def index():
+    return  render_template('json/distance/nanometers_to_astronomical_unit.json')
+
+@app.route('/distance/nanometers_to_light_years_json', endpoint='nanometers_to_light_years_json')
+def index():
+    return  render_template('json/distance/nanometers_to_light_years.json')
+
+@app.route('/distance/nanometers_to_centimeters_json', endpoint='nanometers_to_centimeters_json')
+def index():
+    return  render_template('json/distance/nanometers_to_centimeters.json')
+
+@app.route('/distance/nanometers_to_millimeters_json', endpoint='nanometers_to_millimeters_json')
+def index():
+    return  render_template('json/distance/nanometers_to_millimeters.json')
 
 #add.app_url_rule('/', view_func=View.as_view('main'), methods=['GET','POST'])
 
