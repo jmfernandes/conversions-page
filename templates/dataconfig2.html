@@ -173,13 +173,14 @@
             </script>
             <script>
                 //$("#units option[value='eV']").remove();
+                $("#maincat option").val("energy");
+                $("#maincat option").prop('selected', true);
                 
                 var my_value = '{{ data.unit }}';
                 var my_value2 = '{{ data.unitres }}';
                 var my_value3 = '{{ data.mainunit }}';
 
-                $("#maincat option").val("energy");
-                $("#maincat option").prop('selected', true);
+
                 
                 $("#maincat").change(function(){
                                      if( this.options[this.selectedIndex].id == 'distance') {
