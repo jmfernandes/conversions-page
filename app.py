@@ -939,6 +939,48 @@ def index():
 def index():
     return  render_template('json/distance/angstroms_to_nanometers.json')
 
+"""astronomical unit"""
+@app.route('/distance/astronomical_unit_to_meters_json', endpoint='astronomical_unit_to_meters_json')
+def index():
+    return  render_template('json/distance/astronomical_unit_to_meters.json')
+
+@app.route('/distance/astronomical_unit_to_inches_json', endpoint='astronomical_unit_to_inches_json')
+def index():
+    return  render_template('json/distance/aastronomical_unit_to_inches.json')
+
+@app.route('/distance/astronomical_unit_to_feet_json', endpoint='astronomical_unit_to_feet_json')
+def index():
+    return  render_template('json/distance/astronomical_unit_to_feet.json')
+
+@app.route('/distance/astronomical_unit_to_yards_json', endpoint='astronomical_unit_to_yards_json')
+def index():
+    return  render_template('json/distance/astronomical_unit_to_yards.json')
+
+@app.route('/distance/astronomical_unit_to_leagues_json', endpoint='astronomical_unit_to_leagues_json')
+def index():
+    return  render_template('json/distance/astronomical_unit_to_leagues.json')
+
+@app.route('/distance/astronomical_unit_to_angstroms_json', endpoint='astronomical_unit_to_angstroms_json')
+def index():
+    return  render_template('json/distance/astronomical_unit_to_angstroms.json')
+
+@app.route('/distance/astronomical_unit_to_light_years_json', endpoint='astronomical_unit_to_light_years_json')
+def index():
+    return  render_template('json/distance/astronomical_unit_to_light_years.json')
+
+@app.route('/distance/astronomical_unit_to_centimeters_json', endpoint='astronomical_unit_to_centimeters_json')
+def index():
+    return  render_template('json/distance/astronomical_unit_to_centimeters.json')
+
+@app.route('/distance/astronomical_unit_to_millimeters_json', endpoint='astronomical_unit_to_millimeters_json')
+def index():
+    return  render_template('json/distance/astronomical_unit_to_millimeters.json')
+
+@app.route('/distance/astronomical_unit_to_nanometers_json', endpoint='astronomical_unit_to_nanometers_json')
+def index():
+    return  render_template('json/distance/astronomical_unit_to_nanometers.json')
+
+
 #add.app_url_rule('/', view_func=View.as_view('main'), methods=['GET','POST'])
 
 if __name__ == '__main__':
