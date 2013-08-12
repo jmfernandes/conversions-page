@@ -77,7 +77,7 @@ def handle_data():
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'meters' and data['unitres'] == 'ångströms' and trigger == 5:
+    elif data['unit'] == 'meters' and data['unitres'] == 'angstroms' and trigger == 5:
         json_file = open('templates/json/distance/meters_to_angstroms.json')
         jsondata = json.load(json_file)
         json_file.close()
@@ -131,7 +131,7 @@ def handle_data():
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'inches' and data['unitres'] == 'ångströms' and trigger == 5:
+    elif data['unit'] == 'inches' and data['unitres'] == 'angstroms' and trigger == 5:
         json_file = open('templates/json/distance/inches_to_angstroms.json')
         jsondata = json.load(json_file)
         json_file.close()
@@ -185,7 +185,7 @@ def handle_data():
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'feet' and data['unitres'] == 'ångströms' and trigger == 5:
+    elif data['unit'] == 'feet' and data['unitres'] == 'angstroms' and trigger == 5:
         json_file = open('templates/json/distance/feet_to_angstroms.json')
         jsondata = json.load(json_file)
         json_file.close()
@@ -239,7 +239,7 @@ def handle_data():
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'yards' and data['unitres'] == 'ångströms' and trigger == 5:
+    elif data['unit'] == 'yards' and data['unitres'] == 'angstroms' and trigger == 5:
         json_file = open('templates/json/distance/yards_to_angstroms.json')
         jsondata = json.load(json_file)
         json_file.close()
@@ -293,7 +293,7 @@ def handle_data():
         data['res'] = float(data['num'])*float(jsondata['value'])
     elif data['unit'] == 'leagues' and data['unitres'] == 'leagues' and trigger == 5:
         data['res'] = float(data['num'])*1.0
-    elif data['unit'] == 'leagues' and data['unitres'] == 'ångströms' and trigger == 5:
+    elif data['unit'] == 'leagues' and data['unitres'] == 'angstroms' and trigger == 5:
         json_file = open('templates/json/distance/leagues_to_angstroms.json')
         jsondata = json.load(json_file)
         json_file.close()
@@ -325,54 +325,54 @@ def handle_data():
         data['res'] = float(data['num'])*float(jsondata['value'])
 
 
-    elif data['unit'] == 'ångströms' and data['unitres'] == 'meters' and trigger == 5:
+    elif data['unit'] == 'angstroms' and data['unitres'] == 'meters' and trigger == 5:
         json_file = open('templates/json/distance/angstroms_to_meters.json')
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'ångströms' and data['unitres'] == 'inches' and trigger == 5:
+    elif data['unit'] == 'angstroms' and data['unitres'] == 'inches' and trigger == 5:
         json_file = open('templates/json/distance/angstroms_to_inches.json')
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'ångströms' and data['unitres'] == 'feet' and trigger == 5:
+    elif data['unit'] == 'angstroms' and data['unitres'] == 'feet' and trigger == 5:
         json_file = open('templates/json/distance/angstroms_to_feet.json')
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'ångströms' and data['unitres'] == 'yards' and trigger == 5:
+    elif data['unit'] == 'angstroms' and data['unitres'] == 'yards' and trigger == 5:
         json_file = open('templates/json/distance/angstroms_to_yards.json')
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'ångströms' and data['unitres'] == 'leagues' and trigger == 5:
+    elif data['unit'] == 'angstroms' and data['unitres'] == 'leagues' and trigger == 5:
         json_file = open('templates/json/distance/angstroms_to_leagues.json')
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'ångströms' and data['unitres'] == 'ångströms' and trigger == 5:
+    elif data['unit'] == 'angstroms' and data['unitres'] == 'angstroms' and trigger == 5:
         data['res'] = float(data['num'])*1.0
-    elif data['unit'] == 'ångströms' and data['unitres'] == 'astronomical unit' and trigger == 5:
+    elif data['unit'] == 'angstroms' and data['unitres'] == 'astronomical unit' and trigger == 5:
         json_file = open('templates/json/distance/angstroms_to_astronomical_unit.json')
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'ångströms' and data['unitres'] == 'light years' and trigger == 5:
+    elif data['unit'] == 'angstroms' and data['unitres'] == 'light years' and trigger == 5:
         json_file = open('templates/json/distance/angstroms_to_light_years.json')
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'ångströms' and data['unitres'] == 'centimeters' and trigger == 5:
+    elif data['unit'] == 'angstroms' and data['unitres'] == 'centimeters' and trigger == 5:
         json_file = open('templates/json/distance/angstroms_to_centimeters.json')
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'ångströms' and data['unitres'] == 'millimeters' and trigger == 5:
+    elif data['unit'] == 'angstroms' and data['unitres'] == 'millimeters' and trigger == 5:
         json_file = open('templates/json/distance/angstroms_to_millimeters.json')
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'ångströms' and data['unitres'] == 'nanometers' and trigger == 5:
+    elif data['unit'] == 'angstroms' and data['unitres'] == 'nanometers' and trigger == 5:
         json_file = open('templates/json/distance/angstroms_to_nanometers.json')
         jsondata = json.load(json_file)
         json_file.close()
@@ -404,7 +404,7 @@ def handle_data():
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'astronomical unit' and data['unitres'] == 'ångströms' and trigger == 5:
+    elif data['unit'] == 'astronomical unit' and data['unitres'] == 'angstroms' and trigger == 5:
         json_file = open('templates/json/distance/astronomical_unit_to_angstroms.json')
         jsondata = json.load(json_file)
         json_file.close()
@@ -458,7 +458,7 @@ def handle_data():
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'light years' and data['unitres'] == 'ångströms' and trigger == 5:
+    elif data['unit'] == 'light years' and data['unitres'] == 'angstroms' and trigger == 5:
         json_file = open('templates/json/distance/light_years_to_angstroms.json')
         jsondata = json.load(json_file)
         json_file.close()
@@ -513,7 +513,7 @@ def handle_data():
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'centimeters' and data['unitres'] == 'ångströms' and trigger == 5:
+    elif data['unit'] == 'centimeters' and data['unitres'] == 'angstroms' and trigger == 5:
         json_file = open('templates/json/distance/centimeters_to_angstroms.json')
         jsondata = json.load(json_file)
         json_file.close()
@@ -568,7 +568,7 @@ def handle_data():
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'millimeters' and data['unitres'] == 'ångströms' and trigger == 5:
+    elif data['unit'] == 'millimeters' and data['unitres'] == 'angstroms' and trigger == 5:
         json_file = open('templates/json/distance/millimeters_to_angstroms.json')
         jsondata = json.load(json_file)
         json_file.close()
@@ -623,7 +623,7 @@ def handle_data():
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
-    elif data['unit'] == 'nanometers' and data['unitres'] == 'ångströms' and trigger == 5:
+    elif data['unit'] == 'nanometers' and data['unitres'] == 'angstroms' and trigger == 5:
         json_file = open('templates/json/distance/nanometers_to_angstroms.json')
         jsondata = json.load(json_file)
         json_file.close()
