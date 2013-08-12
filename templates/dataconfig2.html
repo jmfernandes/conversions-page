@@ -201,7 +201,11 @@
                 var my_value2 = '{{ data.unitres }}';
                 var my_value3 = '{{ data.mainunit }}';
 
-                var check = [ my_value, my_value2, my_value3 ].every( function ( v ) { return !!v } )
+                var check = (function(a, b, c) {
+                    return !!a && !!b && !!c;
+                }(my_value, my_value2, my_value3));
+
+                console.log(check);
 
                 //var $e = document.getElementById("maincat");
                 //var $strUser = $e.options[$e.selectedIndex].value;
