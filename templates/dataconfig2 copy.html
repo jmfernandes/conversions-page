@@ -181,25 +181,58 @@
                 var my_value3 = '{{ data.mainunit }}';
 
 
-
-
-                var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
-
-                var $el = $("#units");
+                
+                $("#maincat").change(function(){
+                                     //$("#maincat").val('energy');
+                                     if( this.options[this.selectedIndex].value == 'distance') {
+                                     var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
+                                     }
+                                     else {
+                                     var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
+                                     }
+                                     
+                                     var $el = $("#units");
                                      $el.empty(); // remove old options
                                      $.each(newOptions, function(key, value) {
                                             $el.append($("<option></option>")
                                                        .attr("value", value).text(key));
                                             });
+                                     
+                                     
+                                     var $eli = $("#resultunit");
+                                     $eli.empty(); // remove old options
+                                     $.each(newOptions, function(key, value) {
+                                            $eli.append($("<option></option>")
+                                                       .attr("value", value).text(key));
+                                            });
+                                     })
+
                 
-
+                //document.getElementById('maincat').value = "energy";
                 var my_value4 = $("#maincat").val();
+                //$('#printHere').html(my_value4);
+                //$('#printHere').html(newOptions);
 
+                //var e = document.getElementById("maincat");
+                //var strUser = e.options[e.selectedIndex].value;
 
                 
                 $('#printHere').html(my_value4);
                 $('#printHere2').html(my_value3);
                 $('#printHere3').html(my_value);
+                //if( $("#maincat option").val() == 'distance') {
+                //    var myOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
+                //}
+                //else {
+                //    var myOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
+                //}
+
+                //var $el = $("#units");
+                //$el.empty(); // remove old options
+                //$.each(myOptions, function(key, value) {
+                //    $el.append($("<option></option>")
+                //    .attr("value", value).text(key));
+                //});
                 
                 $('#maincat option').each(function(){
                                         var $this = $(this); // cache the this jQuery object to avoid overhead
