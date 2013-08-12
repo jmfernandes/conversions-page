@@ -197,8 +197,10 @@
                                             $el.append($("<option></option>")
                                                        .attr("value", value).text(key));
                                             });
-                                     
-                                     
+                                     if ($el.val() == my_value) { // if this option's value is equal to our value
+                                        $el.prop('selected', true); // select this option
+                                        return false; // break the loop, no need to look further
+                                     };
                                      var $eli = $("#resultunit");
                                      $eli.empty(); // remove old options
                                      $.each(newOptions, function(key, value) {
@@ -207,7 +209,7 @@
                                             });
                                      })
 
-                
+                var newOptions2 = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
                 //document.getElementById('maincat').value = "energy";
                 var my_value4 = $("#maincat").val();
                 //$('#printHere').html(my_value4);
