@@ -121,6 +121,7 @@
                                     <select class="span3" id="maincat" name="maincat">
                                         <option id='distance' value='distance'>Convert Distances</option>
                                         <option id='energy' value='energy'>Convert Energy</option>
+                                        <option id='velocity' value='velocity'>Convert Velocities</option>
                                     </select>
                                     <br>
                                     <input type="text" name="number" class="span3" value="{{data['num']}}">
@@ -185,10 +186,12 @@
                                      if( this.options[this.selectedIndex].value == 'distance') {
                                      var newOptions2 = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
                                      }
-                                     else {
-                                     var newOptions2 = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
+                                     else if (this.options[this.selectedIndex].value == 'energy'){
+                                     var newOptions2 = {'eV': 'eV','Joules': 'Joules','calories': 'calories', 'Btu':'Btu'};
                                      }
-                                     
+                                     else if (this.options[this.selectedIndex].value == 'velocity') {
+                                     var newOptions2 = {'miles/hour': 'miles/hour','kilometers/hour': 'kilometers/hour', 'speed of light':'speed of light','feet/second': 'feet/second', 'meters/second':'meters/second'};
+                                     };
                                      var $ele = $("#units");
                                      $ele.empty(); // remove old options
                                      $.each(newOptions2, function(key, value) {
@@ -208,10 +211,13 @@
 
 
                 if (my_value3 == 'energy') {
-                var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
+                var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories', 'Btu':'Btu'};
                 }
-                else {
+                else if (my_value3 == 'distance'){
                 var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet', 'yards':'yards', 'leagues':'leagues'};
+                }
+                else if (my_value3 == 'velocity'){
+                var newOptions = {'miles/hour': 'miles/hour','kilometers/hour': 'kilometers/hour', 'speed of light':'speed of light','feet/second': 'feet/second', 'meters/second':'meters/second'};
                 }
                 var $el = $("#units");
                                      $el.empty(); // remove old options
@@ -228,13 +234,13 @@
                                             });
                 
 
-                var my_value4 = $("#maincat").val();
+                //var my_value4 = $("#maincat").val();
 
 
                 
-                $('#printHere').html(my_value4);
-                $('#printHere2').html(my_value3);
-                $('#printHere3').html(my_value);
+                //$('#printHere').html(my_value4);
+                //$('#printHere2').html(my_value3);
+                //$('#printHere3').html(my_value);
                 
                 $('#maincat option').each(function(){
                                         var $this = $(this); // cache the this jQuery object to avoid overhead
