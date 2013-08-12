@@ -182,9 +182,12 @@
 
 
 
-
+                if (my_value3 == 'distance') {}
                 var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
-
+                }
+                else {
+                    var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet'};
+                }
                 var $el = $("#units");
                                      $el.empty(); // remove old options
                                      $.each(newOptions, function(key, value) {
