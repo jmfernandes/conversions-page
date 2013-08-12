@@ -183,9 +183,13 @@
 
                 
                 $("#maincat").change(function(){
-                                     
+                                     //$("#maincat").val('energy');
+                                     if( this.options[this.selectedIndex].value == 'distance') {
+                                     var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
+                                     }
+                                     else {
                                      var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
-                                     
+                                     }
                                      
                                      var $el = $("#units");
                                      $el.empty(); // remove old options
