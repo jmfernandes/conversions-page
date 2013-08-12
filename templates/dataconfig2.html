@@ -181,13 +181,13 @@
                 $("#maincat option").val("energy");
                 $("#maincat").change(function(){
                                      if( this.options[this.selectedIndex].id == 'distance') {
-                                     var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
+                                     newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
                                      }
                                      else {
-                                     var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
+                                     newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
                                      $("#maincat").val("energy");
                                      }
-                                     $('#printHere').html(newOptions);   
+                                       
                                      var $el = $("#units");
                                      $el.empty(); // remove old options
                                      $.each(newOptions, function(key, value) {
@@ -208,7 +208,7 @@
 
                 var my_value4 = $("#maincat option").val();
                 //$('#printHere').html(my_value4);
-                //$('#printHere').html(newOptions);
+                $('#printHere').html(newOptions);
 
                 //var $e = document.getElementById("maincat");
                 //var $strUser = $e.options[$e.selectedIndex].value;
