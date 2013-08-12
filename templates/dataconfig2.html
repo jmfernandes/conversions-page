@@ -182,16 +182,23 @@
 
 
 
-                if (my_value3 == 'distance') {
+                if (my_value3 == 'energy') {
                 var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories'};
                 }
                 else {
-                var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet'};
+                var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet', 'yards':'yards', 'leagues':'leagues'};
                 }
                 var $el = $("#units");
                                      $el.empty(); // remove old options
                                      $.each(newOptions, function(key, value) {
                                             $el.append($("<option></option>")
+                                                       .attr("value", value).text(key));
+                                            });
+
+                var $eli = $("#resultunit");
+                                     $eli.empty(); // remove old options
+                                     $.each(newOptions, function(key, value) {
+                                            $eli.append($("<option></option>")
                                                        .attr("value", value).text(key));
                                             });
                 
