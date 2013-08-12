@@ -209,15 +209,12 @@
                 //$('#printHere').html(my_value4);
                 //$('#printHere').html(newOptions);
 
-                var e = document.getElementById("maincat");
-                var strUser = e.options[e.selectedIndex].value;
+                //var e = document.getElementById("maincat");
+                //var strUser = e.options[e.selectedIndex].value;
 
-                function SelectElement("energy")
-                {    
-                var element = document.getElementById('maincat');
-                element.value = "energy";
-                }
-                $('#printHere').html($("#maincat option").val());
+                $("#maincat").val("energy");
+                $("#maincat").prop('selected', true);
+                $('#printHere').html(my_value4);
                 //if( $("#maincat option").val() == 'distance') {
                 //    var myOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
                 //}
