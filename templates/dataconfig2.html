@@ -178,7 +178,7 @@
                 var my_value2 = '{{ data.unitres }}';
                 var my_value3 = '{{ data.mainunit }}';
 
-                $("#maincat").val("energy");
+                $("#maincat option").val("energy");
                 $("#maincat").change(function(){
                                      if( this.options[this.selectedIndex].id == 'distance') {
                                      var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
