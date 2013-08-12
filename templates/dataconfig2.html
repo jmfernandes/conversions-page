@@ -180,8 +180,8 @@
 
 
                 
-                $("#maincat option").change(function(){
-                                     if( this.options[this.selectedIndex].id == 'distance') {
+                $("#maincat").change(function(){
+                                     if( this.options[this.selectedIndex].value == 'distance') {
                                      var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
                                      }
                                      else {
