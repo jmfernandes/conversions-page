@@ -77,6 +77,37 @@ def handle_data():
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'meters' and data['unitres'] == 'ångströms' and trigger == 5:
+        json_file = open('templates/json/distance/meters_to_angstroms.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'meters' and data['unitres'] == 'astronomical unit' and trigger == 5:
+        json_file = open('templates/json/distance/meters_to_astronomical_unit.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'meters' and data['unitres'] == 'light years' and trigger == 5:
+        json_file = open('templates/json/distance/meters_to_light_years.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'meters' and data['unitres'] == 'centimeters' and trigger == 5:
+        json_file = open('templates/json/distance/meters_to_centimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'meters' and data['unitres'] == 'millimeters' and trigger == 5:
+        json_file = open('templates/json/distance/meters_to_millimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'meters' and data['unitres'] == 'nanometers' and trigger == 5:
+        json_file = open('templates/json/distance/meters_to_nanometers.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
 
     elif data['unit'] == 'inches' and data['unitres'] == 'meters' and trigger == 5:
         json_file = open('templates/json/distance/inches_to_meters.json')
@@ -100,6 +131,37 @@ def handle_data():
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'inches' and data['unitres'] == 'ångströms' and trigger == 5:
+        json_file = open('templates/json/distance/inches_to_angstroms.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'inches' and data['unitres'] == 'astronomical unit' and trigger == 5:
+        json_file = open('templates/json/distance/inches_to_astronomical_unit.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'inches' and data['unitres'] == 'light years' and trigger == 5:
+        json_file = open('templates/json/distance/inches_to_light_years.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'inches' and data['unitres'] == 'centimeters' and trigger == 5:
+        json_file = open('templates/json/distance/inches_to_centimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'inches' and data['unitres'] == 'millimeters' and trigger == 5:
+        json_file = open('templates/json/distance/inches_to_millimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'inches' and data['unitres'] == 'nanometers' and trigger == 5:
+        json_file = open('templates/json/distance/inches_to_nanometers.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
 
     elif data['unit'] == 'feet' and data['unitres'] == 'meters' and trigger == 5:
         json_file = open('templates/json/distance/feet_to_meters.json')
@@ -123,6 +185,37 @@ def handle_data():
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'feet' and data['unitres'] == 'ångströms' and trigger == 5:
+        json_file = open('templates/json/distance/feet_to_angstroms.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'feet' and data['unitres'] == 'astronomical unit' and trigger == 5:
+        json_file = open('templates/json/distance/feet_to_astronomical_unit.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'feet' and data['unitres'] == 'light years' and trigger == 5:
+        json_file = open('templates/json/distance/feet_to_light_years.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'feet' and data['unitres'] == 'centimeters' and trigger == 5:
+        json_file = open('templates/json/distance/feet_to_centimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'feet' and data['unitres'] == 'millimeters' and trigger == 5:
+        json_file = open('templates/json/distance/feet_to_millimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'feet' and data['unitres'] == 'nanometers' and trigger == 5:
+        json_file = open('templates/json/distance/feet_to_nanometers.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
 
     elif data['unit'] == 'yards' and data['unitres'] == 'meters' and trigger == 5:
         json_file = open('templates/json/distance/yards_to_meters.json')
@@ -146,6 +239,37 @@ def handle_data():
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'yards' and data['unitres'] == 'ångströms' and trigger == 5:
+        json_file = open('templates/json/distance/yards_to_angstroms.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'yards' and data['unitres'] == 'astronomical unit' and trigger == 5:
+        json_file = open('templates/json/distance/yards_to_astronomical_unit.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'yards' and data['unitres'] == 'light years' and trigger == 5:
+        json_file = open('templates/json/distance/yards_to_light_years.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'yards' and data['unitres'] == 'centimeters' and trigger == 5:
+        json_file = open('templates/json/distance/yards_to_centimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'yards' and data['unitres'] == 'millimeters' and trigger == 5:
+        json_file = open('templates/json/distance/yards_to_millimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'yards' and data['unitres'] == 'nanometers' and trigger == 5:
+        json_file = open('templates/json/distance/yards_to_nanometers.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
 
     elif data['unit'] == 'leagues' and data['unitres'] == 'meters' and trigger == 5:
         json_file = open('templates/json/distance/leagues_to_meters.json')
@@ -169,6 +293,364 @@ def handle_data():
         data['res'] = float(data['num'])*float(jsondata['value'])
     elif data['unit'] == 'leagues' and data['unitres'] == 'leagues' and trigger == 5:
         data['res'] = float(data['num'])*1.0
+    elif data['unit'] == 'leagues' and data['unitres'] == 'ångströms' and trigger == 5:
+        json_file = open('templates/json/distance/leagues_to_angstroms.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'leagues' and data['unitres'] == 'astronomical unit' and trigger == 5:
+        json_file = open('templates/json/distance/leagues_to_astronomical_unit.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'leagues' and data['unitres'] == 'light years' and trigger == 5:
+        json_file = open('templates/json/distance/leagues_to_light_years.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'leagues' and data['unitres'] == 'centimeters' and trigger == 5:
+        json_file = open('templates/json/distance/leagues_to_centimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'leagues' and data['unitres'] == 'millimeters' and trigger == 5:
+        json_file = open('templates/json/distance/leagues_to_millimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'leagues' and data['unitres'] == 'nanometers' and trigger == 5:
+        json_file = open('templates/json/distance/leagues_to_nanometers.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
+
+    elif data['unit'] == 'ångströms' and data['unitres'] == 'meters' and trigger == 5:
+        json_file = open('templates/json/distance/angstroms_to_meters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'ångströms' and data['unitres'] == 'inches' and trigger == 5:
+        json_file = open('templates/json/distance/angstroms_to_inches.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'ångströms' and data['unitres'] == 'feet' and trigger == 5:
+        json_file = open('templates/json/distance/angstroms_to_feet.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'ångströms' and data['unitres'] == 'yards' and trigger == 5:
+        json_file = open('templates/json/distance/angstroms_to_yards.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'ångströms' and data['unitres'] == 'leagues' and trigger == 5:
+        json_file = open('templates/json/distance/angstroms_to_leagues.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'ångströms' and data['unitres'] == 'ångströms' and trigger == 5:
+        data['res'] = float(data['num'])*1.0
+    elif data['unit'] == 'ångströms' and data['unitres'] == 'astronomical unit' and trigger == 5:
+        json_file = open('templates/json/distance/angstroms_to_astronomical_unit.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'ångströms' and data['unitres'] == 'light years' and trigger == 5:
+        json_file = open('templates/json/distance/angstroms_to_light_years.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'ångströms' and data['unitres'] == 'centimeters' and trigger == 5:
+        json_file = open('templates/json/distance/angstroms_to_centimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'ångströms' and data['unitres'] == 'millimeters' and trigger == 5:
+        json_file = open('templates/json/distance/angstroms_to_millimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'ångströms' and data['unitres'] == 'nanometers' and trigger == 5:
+        json_file = open('templates/json/distance/angstroms_to_nanometers.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
+
+    elif data['unit'] == 'astronomical unit' and data['unitres'] == 'meters' and trigger == 5:
+        json_file = open('templates/json/distance/astronomical_unit_to_meters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'astronomical unit' and data['unitres'] == 'inches' and trigger == 5:
+        json_file = open('templates/json/distance/astronomical_unit_to_inches.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'astronomical unit' and data['unitres'] == 'feet' and trigger == 5:
+        json_file = open('templates/json/distance/astronomical_unit_to_feet.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'astronomical unit' and data['unitres'] == 'yards' and trigger == 5:
+        json_file = open('templates/json/distance/astronomical_unit_to_yards.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'astronomical unit' and data['unitres'] == 'leagues' and trigger == 5:
+        json_file = open('templates/json/distance/astronomical_unit_to_leagues.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'astronomical unit' and data['unitres'] == 'ångströms' and trigger == 5:
+        json_file = open('templates/json/distance/astronomical_unit_to_angstroms.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'astronomical unit' and data['unitres'] == 'astronomical unit' and trigger == 5:
+        data['res'] = float(data['num'])*1.0
+    elif data['unit'] == 'astronomical unit' and data['unitres'] == 'light years' and trigger == 5:
+        json_file = open('templates/json/distance/astronomical_unit_to_light_years.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'astronomical unit' and data['unitres'] == 'centimeters' and trigger == 5:
+        json_file = open('templates/json/distance/astronomical_unit_to_centimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'astronomical unit' and data['unitres'] == 'millimeters' and trigger == 5:
+        json_file = open('templates/json/distance/astronomical_unit_to_millimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'astronomical unit' and data['unitres'] == 'nanometers' and trigger == 5:
+        json_file = open('templates/json/distance/astronomical_unit_to_nanometers.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
+
+    elif data['unit'] == 'light years' and data['unitres'] == 'meters' and trigger == 5:
+        json_file = open('templates/json/distance/light_years_to_meters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'light years' and data['unitres'] == 'inches' and trigger == 5:
+        json_file = open('templates/json/distance/light_years_to_inches.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'light years' and data['unitres'] == 'feet' and trigger == 5:
+        json_file = open('templates/json/distance/light_years_to_feet.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'light years' and data['unitres'] == 'yards' and trigger == 5:
+        json_file = open('templates/json/distance/light_years_to_yards.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'light years' and data['unitres'] == 'leagues' and trigger == 5:
+        json_file = open('templates/json/distance/light_years_to_leagues.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'light years' and data['unitres'] == 'ångströms' and trigger == 5:
+        json_file = open('templates/json/distance/light_years_to_angstroms.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'light years' and data['unitres'] == 'astronomical unit' and trigger == 5:
+        json_file = open('templates/json/distance/light_years_to_astronomical_unit.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'light years' and data['unitres'] == 'light years' and trigger == 5:
+        data['res'] = float(data['num'])*1.0
+    elif data['unit'] == 'light years' and data['unitres'] == 'centimeters' and trigger == 5:
+        json_file = open('templates/json/distance/light_years_to_centimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'light years' and data['unitres'] == 'millimeters' and trigger == 5:
+        json_file = open('templates/json/distance/light_years_to_millimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'light years' and data['unitres'] == 'nanometers' and trigger == 5:
+        json_file = open('templates/json/distance/light_years_to_nanometers.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
+
+
+    elif data['unit'] == 'centimeters' and data['unitres'] == 'meters' and trigger == 5:
+        json_file = open('templates/json/distance/centimeters_to_meters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'centimeters' and data['unitres'] == 'inches' and trigger == 5:
+        json_file = open('templates/json/distance/centimeters_to_inches.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'centimeters' and data['unitres'] == 'feet' and trigger == 5:
+        json_file = open('templates/json/distance/centimeters_to_feet.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'centimeters' and data['unitres'] == 'yards' and trigger == 5:
+        json_file = open('templates/json/distance/centimeters_to_yards.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'centimeters' and data['unitres'] == 'leagues' and trigger == 5:
+        json_file = open('templates/json/distance/centimeters_to_leagues.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'centimeters' and data['unitres'] == 'ångströms' and trigger == 5:
+        json_file = open('templates/json/distance/centimeters_to_angstroms.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'centimeters' and data['unitres'] == 'astronomical unit' and trigger == 5:
+        json_file = open('templates/json/distance/centimeters_to_astronomical_unit.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'centimeters' and data['unitres'] == 'light years' and trigger == 5:
+        json_file = open('templates/json/distance/centimeters_to_light_years.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'centimeters' and data['unitres'] == 'centimeters' and trigger == 5:
+        data['res'] = float(data['num'])*1.0
+    elif data['unit'] == 'centimeters' and data['unitres'] == 'millimeters' and trigger == 5:
+        json_file = open('templates/json/distance/centimeters_to_millimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'centimeters' and data['unitres'] == 'nanometers' and trigger == 5:
+        json_file = open('templates/json/distance/centimeters_to_nanometers.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
+
+
+    elif data['unit'] == 'millimeters' and data['unitres'] == 'meters' and trigger == 5:
+        json_file = open('templates/json/distance/millimeters_to_meters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'millimeters' and data['unitres'] == 'inches' and trigger == 5:
+        json_file = open('templates/json/distance/millimeters_to_inches.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'millimeters' and data['unitres'] == 'feet' and trigger == 5:
+        json_file = open('templates/json/distance/millimeters_to_feet.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'millimeters' and data['unitres'] == 'yards' and trigger == 5:
+        json_file = open('templates/json/distance/millimeters_to_yards.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'millimeters' and data['unitres'] == 'leagues' and trigger == 5:
+        json_file = open('templates/json/distance/millimeters_to_leagues.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'millimeters' and data['unitres'] == 'ångströms' and trigger == 5:
+        json_file = open('templates/json/distance/millimeters_to_angstroms.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'millimeters' and data['unitres'] == 'astronomical unit' and trigger == 5:
+        json_file = open('templates/json/distance/millimeters_to_astronomical_unit.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'millimeters' and data['unitres'] == 'light years' and trigger == 5:
+        json_file = open('templates/json/distance/millimeters_to_light_years.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'millimeters' and data['unitres'] == 'centimeters' and trigger == 5:
+        json_file = open('templates/json/distance/millimeters_to_centimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'millimeters' and data['unitres'] == 'millimeters' and trigger == 5:
+        data['res'] = float(data['num'])*1.0
+    elif data['unit'] == 'millimeters' and data['unitres'] == 'nanometers' and trigger == 5:
+        json_file = open('templates/json/distance/millimeters_to_nanometers.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
+
+
+    elif data['unit'] == 'nanometers' and data['unitres'] == 'meters' and trigger == 5:
+        json_file = open('templates/json/distance/nanometers_to_meters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'nanometers' and data['unitres'] == 'inches' and trigger == 5:
+        json_file = open('templates/json/distance/nanometers_to_inches.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'nanometers' and data['unitres'] == 'feet' and trigger == 5:
+        json_file = open('templates/json/distance/nanometers_to_feet.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'nanometers' and data['unitres'] == 'yards' and trigger == 5:
+        json_file = open('templates/json/distance/nanometers_to_yards.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'nanometers' and data['unitres'] == 'leagues' and trigger == 5:
+        json_file = open('templates/json/distance/nanometers_to_leagues.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'nanometers' and data['unitres'] == 'ångströms' and trigger == 5:
+        json_file = open('templates/json/distance/nanometers_to_angstroms.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'nanometers' and data['unitres'] == 'astronomical unit' and trigger == 5:
+        json_file = open('templates/json/distance/nanometers_to_astronomical_unit.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'nanometers' and data['unitres'] == 'light years' and trigger == 5:
+        json_file = open('templates/json/distance/nanometers_to_light_years.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'nanometers' and data['unitres'] == 'centimeters' and trigger == 5:
+        json_file = open('templates/json/distance/nanometers_to_centimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'nanometers' and data['unitres'] == 'millimeters' and trigger == 5:
+        json_file = open('templates/json/distance/nanometers_to_millimeters.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'nanometers' and data['unitres'] == 'nanometers' and trigger == 5:
+        data['res'] = float(data['num'])*1.0
+
 
     elif data['unit'] == 'eV' and data['unitres'] == 'eV' and trigger == 5:
         data['res'] = float(data['num'])*1.0
@@ -224,6 +706,30 @@ def index():
 def index():
     return  render_template('json/distance/meters_to_leagues.json')
 
+@app.route('/distance/meters_to_angstroms_json', endpoint='meters_to_angstroms_json')
+def index():
+    return  render_template('json/distance/meters_to_angstroms.json')
+
+@app.route('/distance/meters_to_astronomical_unit_json', endpoint='meters_to_astronomical_unit_json')
+def index():
+    return  render_template('json/distance/meters_to_astronomical_unit.json')
+
+@app.route('/distance/meters_to_light_years_json', endpoint='meters_to_light_years_json')
+def index():
+    return  render_template('json/distance/meters_to_light_years.json')
+
+@app.route('/distance/meters_to_centimeters_json', endpoint='meters_to_centimeters_json')
+def index():
+    return  render_template('json/distance/meters_to_centimeters.json')
+
+@app.route('/distance/meters_to_millimeters_json', endpoint='meters_to_millimeters_json')
+def index():
+    return  render_template('json/distance/meters_to_millimeters.json')
+
+@app.route('/distance/meters_to_nanometers_json', endpoint='meters_to_nanometers_json')
+def index():
+    return  render_template('json/distance/meters_to_nanometers.json')
+
 """inches"""
 
 @app.route('/distance/inches_to_meters_json', endpoint='inches_to_meters_json')
@@ -241,6 +747,30 @@ def index():
 @app.route('/distance/inches_to_leagues_json', endpoint='inches_to_leagues_json')
 def index():
     return  render_template('json/distance/inches_to_leagues.json')
+
+@app.route('/distance/inches_to_angstroms_json', endpoint='inches_to_angstroms_json')
+def index():
+    return  render_template('json/distance/inches_to_angstroms.json')
+
+@app.route('/distance/inches_to_astronomical_unit_json', endpoint='inches_to_astronomical_unit_json')
+def index():
+    return  render_template('json/distance/inches_to_astronomical_unit.json')
+
+@app.route('/distance/inches_to_light_years_json', endpoint='inches_to_light_years_json')
+def index():
+    return  render_template('json/distance/inches_to_light_years.json')
+
+@app.route('/distance/inches_to_centimeters_json', endpoint='inches_to_centimeters_json')
+def index():
+    return  render_template('json/distance/inches_to_centimeters.json')
+
+@app.route('/distance/inches_to_millimeters_json', endpoint='inches_to_millimeters_json')
+def index():
+    return  render_template('json/distance/inches_to_millimeters.json')
+
+@app.route('/distance/inches_to_nanometers_json', endpoint='inches_to_nanometers_json')
+def index():
+    return  render_template('json/distance/inches_to_nanometers.json')
 
 """feet"""
 
@@ -260,6 +790,30 @@ def index():
 def index():
     return  render_template('json/distance/feet_to_leagues.json')
 
+@app.route('/distance/feet_to_angstroms_json', endpoint='feet_to_angstroms_json')
+def index():
+    return  render_template('json/distance/feet_to_angstroms.json')
+
+@app.route('/distance/feet_to_astronomical_unit_json', endpoint='feet_to_astronomical_unit_json')
+def index():
+    return  render_template('json/distance/feet_to_astronomical_unit.json')
+
+@app.route('/distance/feet_to_light_years_json', endpoint='feet_to_light_years_json')
+def index():
+    return  render_template('json/distance/feet_to_light_years.json')
+
+@app.route('/distance/feet_to_centimeters_json', endpoint='feet_to_centimeters_json')
+def index():
+    return  render_template('json/distance/feet_to_centimeters.json')
+
+@app.route('/distance/feet_to_millimeters_json', endpoint='feet_to_millimeters_json')
+def index():
+    return  render_template('json/distance/feet_to_millimeters.json')
+
+@app.route('/distance/feet_to_nanometers_json', endpoint='feet_to_nanometers_json')
+def index():
+    return  render_template('json/distance/feet_to_nanometers.json')
+
 """yards"""
 
 @app.route('/distance/yards_to_meters_json', endpoint='yards_to_meters_json')
@@ -277,6 +831,30 @@ def index():
 @app.route('/distance/yards_to_leagues_json', endpoint='yards_to_leagues_json')
 def index():
     return  render_template('json/distance/yards_to_leagues.json')
+
+@app.route('/distance/yards_to_angstroms_json', endpoint='yards_to_angstroms_json')
+def index():
+    return  render_template('json/distance/yards_to_angstroms.json')
+
+@app.route('/distance/yards_to_astronomical_unit_json', endpoint='yards_to_astronomical_unit_json')
+def index():
+    return  render_template('json/distance/yards_to_astronomical_unit.json')
+
+@app.route('/distance/yards_to_light_years_json', endpoint='yards_to_light_years_json')
+def index():
+    return  render_template('json/distance/yards_to_light_years.json')
+
+@app.route('/distance/yards_to_centimeters_json', endpoint='yards_to_centimeters_json')
+def index():
+    return  render_template('json/distance/yards_to_centimeters.json')
+
+@app.route('/distance/yards_to_millimeters_json', endpoint='yards_to_millimeters_json')
+def index():
+    return  render_template('json/distance/yards_to_millimeters.json')
+
+@app.route('/distance/yards_to_nanometers_json', endpoint='yards_to_nanometers_json')
+def index():
+    return  render_template('json/distance/yards_to_nanometers.json')
 
 """leagues"""
 
@@ -296,6 +874,70 @@ def index():
 def index():
     return  render_template('json/distance/leagues_to_yards.json')
 
+@app.route('/distance/leagues_to_angstroms_json', endpoint='leagues_to_angstroms_json')
+def index():
+    return  render_template('json/distance/leagues_to_angstroms.json')
+
+@app.route('/distance/leagues_to_astronomical_unit_json', endpoint='leagues_to_astronomical_unit_json')
+def index():
+    return  render_template('json/distance/leagues_to_astronomical_unit.json')
+
+@app.route('/distance/leagues_to_light_years_json', endpoint='leagues_to_light_years_json')
+def index():
+    return  render_template('json/distance/leagues_to_light_years.json')
+
+@app.route('/distance/leagues_to_centimeters_json', endpoint='leagues_to_centimeters_json')
+def index():
+    return  render_template('json/distance/leagues_to_centimeters.json')
+
+@app.route('/distance/leagues_to_millimeters_json', endpoint='leagues_to_millimeters_json')
+def index():
+    return  render_template('json/distance/meters_to_millimeters.json')
+
+@app.route('/distance/leagues_to_nanometers_json', endpoint='leagues_to_nanometers_json')
+def index():
+    return  render_template('json/distance/meters_to_nanometers.json')
+
+"""Angstroms"""
+@app.route('/distance/angstroms_to_meters_json', endpoint='angstroms_to_meters_json')
+def index():
+    return  render_template('json/distance/angstroms_to_meters.json')
+
+@app.route('/distance/angstroms_to_inches_json', endpoint='angstroms_to_inches_json')
+def index():
+    return  render_template('json/distance/angstroms_to_inches.json')
+
+@app.route('/distance/angstroms_to_feet_json', endpoint='angstroms_to_feet_json')
+def index():
+    return  render_template('json/distance/angstroms_to_feet.json')
+
+@app.route('/distance/angstroms_to_yards_json', endpoint='angstroms_to_yards_json')
+def index():
+    return  render_template('json/distance/angstroms_to_yards.json')
+
+@app.route('/distance/angstroms_to_leagues_json', endpoint='angstroms_to_leagues_json')
+def index():
+    return  render_template('json/distance/angstroms_to_leagues.json')
+
+@app.route('/distance/angstroms_to_astronomical_unit_json', endpoint='angstroms_to_astronomical_unit_json')
+def index():
+    return  render_template('json/distance/angstroms_to_astronomical_unit.json')
+
+@app.route('/distance/angstroms_to_light_years_json', endpoint='angstroms_to_light_years_json')
+def index():
+    return  render_template('json/distance/angstroms_to_light_years.json')
+
+@app.route('/distance/angstroms_to_centimeters_json', endpoint='angstroms_to_centimeters_json')
+def index():
+    return  render_template('json/distance/angstroms_to_centimeters.json')
+
+@app.route('/distance/angstroms_to_millimeters_json', endpoint='angstroms_to_millimeters_json')
+def index():
+    return  render_template('json/distance/angstroms_to_millimeters.json')
+
+@app.route('/distance/angstroms_to_nanometers_json', endpoint='angstroms_to_nanometers_json')
+def index():
+    return  render_template('json/distance/angstroms_to_nanometers.json')
 
 #add.app_url_rule('/', view_func=View.as_view('main'), methods=['GET','POST'])
 
