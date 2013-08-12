@@ -181,6 +181,7 @@
 
                 
                 $("#maincat").change(function(){
+                                     this.options[this.selectedIndex].value = "energy"
                                      if( this.options[this.selectedIndex].value == 'distance') {
                                      var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
                                      }
