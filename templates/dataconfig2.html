@@ -178,6 +178,8 @@
                 var my_value2 = '{{ data.unitres }}';
                 var my_value3 = '{{ data.mainunit }}';
 
+                $("#maincat option").val("energy");
+                $("#maincat option").prop('selected', true);
                 
                 $("#maincat").change(function(){
                                      if( this.options[this.selectedIndex].id == 'distance') {
@@ -212,8 +214,7 @@
                 //var e = document.getElementById("maincat");
                 //var strUser = e.options[e.selectedIndex].value;
 
-                $("#maincat option").val("energy");
-                $("#maincat option").prop('selected', true);
+                
                 $('#printHere').html(my_value4);
                 //if( $("#maincat option").val() == 'distance') {
                 //    var myOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
