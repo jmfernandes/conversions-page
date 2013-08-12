@@ -181,10 +181,7 @@
 
                 
                 $("#maincat").change(function(){
-                                     var $this = $(this); 
-                                     $this.val('energy');
-                                     $this.prop('selected', true);
-                                     if( $this.options[this.selectedIndex].value == 'distance') {
+                                     if( this.options[this.selectedIndex].value == 'distance') {
                                      var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet','yards':'yards','leagues':'leagues'};
                                      }
                                      else {
