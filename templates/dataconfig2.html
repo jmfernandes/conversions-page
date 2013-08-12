@@ -145,6 +145,7 @@
                                 <button id="convertbut" class="btn" type="submit" style="position:relative; bottom:-50px; right:39%;">Convert!</button>
                                 </form>
                             </div><!--/span-->
+                            <span id="printHere"></span>
                             <div class="span6">
                             </div><!--/span-->
                         </div><!--/row-->
@@ -201,11 +202,7 @@
                 var my_value2 = '{{ data.unitres }}';
                 var my_value3 = '{{ data.mainunit }}';
 
-                var check = (function(a, b, c) {
-                    return !!a && !!b && !!c;
-                }(my_value, my_value2, my_value3));
-
-                console.log(check);
+                $('#printHere').html(my_value);
 
                 //var $e = document.getElementById("maincat");
                 //var $strUser = $e.options[$e.selectedIndex].value;
