@@ -657,7 +657,7 @@ def handle_data():
     elif data['unit'] == 'eV' and data['unitres'] == 'eV' and trigger == 5:
         data['res'] = float(data['num'])*1.0
     elif data['unit'] == 'eV' and data['unitres'] == 'Joules' and trigger == 5:
-        json_file = open('templates/json/energy/eV_to_Joules.json')
+        json_file = open('templates/json/energy/ev_to_joules.json')
         jsondata = json.load(json_file)
         json_file.close()
         data['res'] = float(data['num'])*float(jsondata['value'])
