@@ -1220,7 +1220,7 @@ def index():
 
 
 """eV"""
-@app.route('/energy/ev_to_joules_json', endpoint='ev_to_joules_json')
+@app.route('/energy/eV_to_Joules_json', endpoint='eV_to_Joules_json')
 def index():
     return  render_template('json/energy/ev_to_joules.json')
 
