@@ -30,20 +30,12 @@ def round_sig(x, sig=2):
 def page_not_found(error):
     return render_template('page_not_found.html'), 404
 
-@app.route('/')
+@app.route('/', methods =['GET','POST'])
 def index():
     global foo
     global boo
     foo = request.form.get('units',None)
     boo = request.form.get('resultunit',None)
-    data = {'num':0, 'unit':foo, 'unitres':boo, 'res':'', 'mainunit':''}
-    data['unit'] = request.form.get('units',None)
-    data['unitres'] = request.form.get('resultunit',None)
-    data['mainunit'] = request.form.get('maincat',None)
-    return  render_template('conversions.html',data=data)
-
-@app.route('/data', methods =['GET','POST'])
-def handle_data():
     data = {'num':0, 'unit':foo, 'unitres':boo, 'res':'', 'mainunit':''}
     data['num'] = request.form.get('number',None)
     data['unit'] = request.form.get('units',None)
