@@ -1,7 +1,7 @@
 {
-"value": 3.82929389E-20,
+"value": 1.60217657E-19,
 "units": "unitless", 
-"name": "eV to calories Conversion",
-"citation": "http://www.google.com/search?q=1+eV+to+calories",
-"url": "http://www.conversions.datanab.net/energy/eV_to_calories_json"
+"name": "eV to Joules Conversion",
+"citation": "http://www.google.com/search?q=1+eV+to+joules",
+"url": "http://www.conversions.datanab.net/energy/eV_to_joules_json"
 }
