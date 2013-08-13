@@ -758,10 +758,6 @@ def handle_data():
 
 """JSON PAGES"""
 
-@app.route('/energy/ev_to_joules_json', endpoint='ev_to_joules_json')
-def index():
-    return  render_template('json/energy/ev_to_joules.json')
-
 """meters"""
 
 @app.route('/distance/meters_to_inches_json', endpoint='meters_to_inches_json')
