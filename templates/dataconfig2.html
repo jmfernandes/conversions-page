@@ -141,7 +141,7 @@
                                 <br>
                                 <span class="help-inline"><h4>is</h4></span>
                                 <br>
-                                    <input type="text" name="result" class="span3" value="{{data['res']}}" >
+                                    <input type="text" id="result" name="result" class="span3" value="{{data['res']}}" >
                                     <select class="span2" id="resultunit" name="resultunit">
                                         <option id='meters' value='meters'>meters</option>
                                         <option id='inches' value='inches'>inches</option>
@@ -191,6 +191,7 @@
                 var my_value3 = '{{ data.mainunit }}';
 
                 $("#maincat").change(function(){
+                                     $('input[name="result"]').val("Result appears here");
                                      if( this.options[this.selectedIndex].value == 'distance') {
                                      var newOptions2 = {'meters': 'meters','inches': 'inches','feet': 'feet', 'yards':'yards', 'leagues':'leagues','ångströms':'angstroms', 'astronomical unit': 'astronomical unit', 'light years':'light years','centimeters':'centimeters','millimeters':'millimeters','nanometers':'nanometers'};
                                      }
@@ -249,8 +250,8 @@
                 //$('#printHere').html(my_value4);
                 //$('#printHere2').html(my_value3);
                 //$('#printHere3').html(my_value);
-                
-                
+
+
                 $('#maincat option').each(function(){
                                         var $this = $(this); // cache the this jQuery object to avoid overhead
                                         
