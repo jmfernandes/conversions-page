@@ -748,12 +748,12 @@ def handle_data():
 
 """REFERENCE PAGES"""
 
-@app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
-def index():
-    json_file = open('templates/json/ev_to_joules.json')
-    data = json.load(json_file)
-    json_file.close()
-    return  render_template('ev_to_joules.html',data=data)
+#@app.route('/energy/ev_to_joules', endpoint='ev_to_joules')
+#def index():
+#    json_file = open('templates/json/eV_to_joules.json')
+#    data = json.load(json_file)
+#    json_file.close()
+#    return  render_template('ev_to_joules.html',data=data)
 
 
 """JSON PAGES"""
