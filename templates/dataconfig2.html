@@ -158,9 +158,6 @@
                                 <button id="convertbut" class="btn" type="submit" style="position:relative; bottom:-50px; right:39%;">Convert!</button>
                                 </form>
                             </div><!--/span-->
-                            <span id="printHere"></span>
-                            <span id="printHere2"></span>
-                            <span id="printHere3"></span>
                             <div class="span6">
                             </div><!--/span-->
                         </div><!--/row-->
@@ -193,9 +190,7 @@
                 var my_value2 = '{{ data.unitres }}';
                 var my_value3 = '{{ data.mainunit }}';
 
-
                 $("#maincat").change(function(){
-                                     $('input[type=text].result').val('Result Appears Here')
                                      if( this.options[this.selectedIndex].value == 'distance') {
                                      var newOptions2 = {'meters': 'meters','inches': 'inches','feet': 'feet', 'yards':'yards', 'leagues':'leagues','ångströms':'angstroms', 'astronomical unit': 'astronomical unit', 'light years':'light years','centimeters':'centimeters','millimeters':'millimeters','nanometers':'nanometers'};
                                      }
@@ -254,6 +249,7 @@
                 //$('#printHere').html(my_value4);
                 //$('#printHere2').html(my_value3);
                 //$('#printHere3').html(my_value);
+                
                 
                 $('#maincat option').each(function(){
                                         var $this = $(this); // cache the this jQuery object to avoid overhead
