@@ -34,8 +34,7 @@ def page_not_found(error):
 def index():
     global foo
     foo = request.form.get('units',None)
-    boo = request.form.get('resultunit',None)
-    data = {'num':0, 'unit':foo, 'unitres':boo, 'res':'', 'mainunit':''}
+    data = {'num':0, 'unit':'', 'unitres':foo, 'res':'', 'mainunit':''}
     data['unit'] = request.form.get('units',None)
     data['unitres'] = request.form.get('resultunit',None)
     data['mainunit'] = request.form.get('maincat',None)
@@ -43,7 +42,7 @@ def index():
 
 @app.route('/data', methods =['GET','POST'])
 def handle_data():
-    data = {'num':0, 'unit':foo, 'unitres':boo, 'res':'', 'mainunit':''}
+    data = {'num':0, 'unit':'', 'unitres':foo, 'res':'', 'mainunit':''}
     data['num'] = request.form.get('number',None)
     data['unit'] = request.form.get('units',None)
     data['unitres'] = request.form.get('resultunit',None)
