@@ -656,6 +656,78 @@ def handle_data():
 
     elif data['unit'] == 'eV' and data['unitres'] == 'eV' and trigger == 5:
         data['res'] = float(data['num'])*1.0
+    elif data['unit'] == 'eV' and data['unitres'] == 'Joules' and trigger == 5:
+        json_file = open('templates/json/energy/eV_to_Joules.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'eV' and data['unitres'] == 'calories' and trigger == 5:
+        json_file = open('templates/json/energy/eV_to_calories.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'eV' and data['unitres'] == 'Btu' and trigger == 5:
+        json_file = open('templates/json/energy/eV_to_Btu.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
+
+    elif data['unit'] == 'Joules' and data['unitres'] == 'eV' and trigger == 5:
+        json_file = open('templates/json/energy/Joules_to_eV.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'Joules' and data['unitres'] == 'Joules' and trigger == 5:
+        data['res'] = float(data['num'])*1.0
+    elif data['unit'] == 'Joules' and data['unitres'] == 'calories' and trigger == 5:
+        json_file = open('templates/json/energy/Joules_to_calories.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'Joules' and data['unitres'] == 'Btu' and trigger == 5:
+        json_file = open('templates/json/energy/Joules_to_Btu.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
+
+    elif data['unit'] == 'calories' and data['unitres'] == 'eV' and trigger == 5:
+        json_file = open('templates/json/energy/calories_to_eV.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'calories' and data['unitres'] == 'Joules' and trigger == 5:
+        json_file = open('templates/json/energy/calories_to_Joules.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'calories' and data['unitres'] == 'calories' and trigger == 5:
+        data['res'] = float(data['num'])*1.0
+    elif data['unit'] == 'calories' and data['unitres'] == 'Btu' and trigger == 5:
+        json_file = open('templates/json/energy/calories_to_Btu.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
+
+    elif data['unit'] == 'Btu' and data['unitres'] == 'eV' and trigger == 5:
+        json_file = open('templates/json/energy/Btu_to_eV.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'Btu' and data['unitres'] == 'Joules' and trigger == 5:
+        json_file = open('templates/json/energy/Btu_to_Joules.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'Btu' and data['unitres'] == 'calories' and trigger == 5:
+        json_file = open('templates/json/energy/Btu_to_calories.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'Btu' and data['unitres'] == 'Btu' and trigger == 5:
+        data['res'] = float(data['num'])*1.0
     
     else:
         data['res'] = "Result appears here"
@@ -1149,6 +1221,62 @@ def index():
 @app.route('/distance/nanometers_to_millimeters_json', endpoint='nanometers_to_millimeters_json')
 def index():
     return  render_template('json/distance/nanometers_to_millimeters.json')
+
+
+"""eV"""
+@app.route('/energy/eV_to_Joules_json', endpoint='eV_to_Joules_json')
+def index():
+    return  render_template('json/energy/eV_to_Joules.json')
+
+@app.route('/energy/eV_to_calories_json', endpoint='eV_to_calories_json')
+def index():
+    return  render_template('json/energy/eV_to_calories.json')
+
+@app.route('/energy/eV_to_Btu_json', endpoint='eV_to_Btu_json')
+def index():
+    return  render_template('json/energy/eV_to_Btu.json')
+
+
+"""Joules"""
+@app.route('/energy/Joules_to_eV_json', endpoint='Joules_to_eV_json')
+def index():
+    return  render_template('json/energy/Joules_to_eV.json')
+
+@app.route('/energy/Joules_to_calories_json', endpoint='Joules_to_calories_json')
+def index():
+    return  render_template('json/energy/Joules_to_calories.json')
+
+@app.route('/energy/Joules_to_Btu_json', endpoint='Joules_to_Btu_json')
+def index():
+    return  render_template('json/energy/Joules_to_Btu.json')
+
+
+"""calories"""
+@app.route('/energy/calories_to_eV_json', endpoint='calories_to_eV_json')
+def index():
+    return  render_template('json/energy/calories_to_eV.json')
+
+@app.route('/energy/calories_to_Joules_json', endpoint='calories_to_Joules_json')
+def index():
+    return  render_template('json/energy/calories_to_Joules.json')
+
+@app.route('/energy/calories_to_Btu_json', endpoint='calories_to_Btu_json')
+def index():
+    return  render_template('json/energy/calories_to_Btu.json')
+
+
+"""Btu"""
+@app.route('/energy/Btu_to_Joules_json', endpoint='Btu_to_Joules_json')
+def index():
+    return  render_template('json/energy/Btu_to_Joules.json')
+
+@app.route('/energy/Btu_to_calories_json', endpoint='Btu_to_calories_json')
+def index():
+    return  render_template('json/energy/Btu_to_calories.json')
+
+@app.route('/energy/Btu_to_eV_json', endpoint='Btu_to_eV_json')
+def index():
+    return  render_template('json/energy/Btu_to_eV.json')
 
 #add.app_url_rule('/', view_func=View.as_view('main'), methods=['GET','POST'])
 
