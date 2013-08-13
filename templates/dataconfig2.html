@@ -195,6 +195,7 @@
 
 
                 $("#maincat").change(function(){
+                                     $('input[type=text].result').val('Result Appears Here')
                                      if( this.options[this.selectedIndex].value == 'distance') {
                                      var newOptions2 = {'meters': 'meters','inches': 'inches','feet': 'feet', 'yards':'yards', 'leagues':'leagues','ångströms':'angstroms', 'astronomical unit': 'astronomical unit', 'light years':'light years','centimeters':'centimeters','millimeters':'millimeters','nanometers':'nanometers'};
                                      }
