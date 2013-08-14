@@ -229,13 +229,14 @@
                 var newOptions = {'miles/hour': 'miles/hour','kilometers/hour': 'kilometers/hour', 'speed of light':'speed of light','feet/second': 'feet/second', 'meters/second':'meters/second'};
                 }
                 var $el = $("#units");
-                if( $('#fruit_name').has('option').length > 0 ) {
-                $el.empty(); // remove old options
+                if( $('#units').has('option').length > 0 ) {
+                
                 $.each(newOptions, function(key, value) {
                     $el.append($("<option></option>").attr("value", value).text(key));
                 });
                 }
                 else {
+                $el.empty(); // remove old options
                 $.each(newOptions, function(key, value) {
                     $el.append($("<option></option>").attr("value", value).text(key));
                 }); 
