@@ -229,11 +229,11 @@
                 var newOptions = {'miles/hour': 'miles/hour','kilometers/hour': 'kilometers/hour', 'speed of light':'speed of light','feet/second': 'feet/second', 'meters/second':'meters/second'};
                 }
                 var $el = $("#units");
-                $el.empty(); // remove old options
+                
                 $.each(newOptions, function(key, value) {
                     $el.append($("<option></option>").attr("value", value).text(key));
                 });
-
+                $el.empty(); // remove old options
                 var $eli = $("#resultunit");
                 $eli.empty(); // remove old options
                 $.each(newOptions, function(key, value) {
