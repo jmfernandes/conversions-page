@@ -230,13 +230,14 @@
                 }
                 var $el = $("#units");
                 $el.empty(); // remove old options
-                if not $el
+                if( !$('#units').val() ) { 
                 $.each(newOptions, function(key, value) {
                     $el.append($("<option></option>").attr("value", value).text(key));
                 });
-                else
+                }
+                else {
                     //pass
-
+                }
                 var $eli = $("#resultunit");
                 $eli.empty(); // remove old options
                 $.each(newOptions, function(key, value) {
