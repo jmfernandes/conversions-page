@@ -1262,6 +1262,95 @@ def index():
 def index():
     return  render_template('json/energy/Btu_to_eV.json')
 
+
+"""miles/hour"""
+@app.route('/velocity/miles_hour_to_kilometers_hour_json', endpoint='miles_hour_to_kilometers_hour_json')
+def index():
+    return  render_template('json/velocity/miles_hour_to_kilometers_hour.json')
+
+@app.route('/velocity/miles_hour_to_speed_of_light_json', endpoint='miles_hour_to_speed_of_light_json')
+def index():
+    return  render_template('json/velocity/miles_hour_to_speed_of_light.json')
+
+@app.route('/velocity/miles_hour_to_feet_second_json', endpoint='miles_hour_to_feet_second_json')
+def index():
+    return  render_template('json/velocity/miles_hour_to_feet_second.json')
+
+@app.route('/velocity/miles_hour_to_meters_second_json', endpoint='miles_hour_to_meters_second_json')
+def index():
+    return  render_template('json/velocity/miles_hour_to_meters_second.json')
+
+"""kilometers/hour"""
+@app.route('/velocity/kilometers_hour_to_miles_hour_json', endpoint='kilometers_hour_to_miles_hour_json')
+def index():
+    return  render_template('json/velocity/kilometers_hour_to_miles_hour.json')
+
+@app.route('/velocity/kilometers_hour_to_speed_of_light_json', endpoint='kilometers_hour_to_speed_of_light_json')
+def index():
+    return  render_template('json/velocity/kilometers_hour_to_speed_of_light.json')
+
+@app.route('/velocity/kilometers_hour_to_feet_second_json', endpoint='kilometers_hour_to_feet_second_json')
+def index():
+    return  render_template('json/velocity/kilometers_hour_to_feet_second.json')
+
+@app.route('/velocity/kilometers_hour_to_meters_second_json', endpoint='kilometers_hour_to_meters_second_json')
+def index():
+    return  render_template('json/velocity/kilometers_hour_to_meters_second.json')
+
+
+"""speed of light"""
+@app.route('/velocity/speed_of_light_to_miles_hour_json', endpoint='speed_of_light_to_miles_hour_json')
+def index():
+    return  render_template('json/velocity/speed_of_light_to_miles_hour.json')
+
+@app.route('/velocity/speed_of_light_to_kilometers_hour_json', endpoint='speed_of_light_to_kilometers_hour_json')
+def index():
+    return  render_template('json/velocity/speed_of_light_to_kilometers_hour.json')
+
+@app.route('/velocity/speed_of_light_to_feet_second_json', endpoint='speed_of_light_to_feet_second_json')
+def index():
+    return  render_template('json/velocity/speed_of_light_to_feet_second.json')
+
+@app.route('/velocity/speed_of_light_to_meters_second_json', endpoint='speed_of_light_to_meters_second_json')
+def index():
+    return  render_template('json/velocity/speed_of_light_to_meters_second.json')
+
+"""feet/second"""
+@app.route('/velocity/feet_second_to_miles_hour_json', endpoint='feet_second_to_miles_hour_json')
+def index():
+    return  render_template('json/velocity/feet_second_to_miles_hour.json')
+
+@app.route('/velocity/feet_second_to_kilometers_hour_json', endpoint='feet_second_to_kilometers_hour_json')
+def index():
+    return  render_template('json/velocity/feet_second_to_kilometers_hour.json')
+
+@app.route('/velocity/feet_second_to_speed_of_light_json', endpoint='feet_second_to_speed_of_light_json')
+def index():
+    return  render_template('json/velocity/feet_second_to_speed_of_light.json')
+
+@app.route('/velocity/feet_second_to_meters_second_json', endpoint='feet_second_to_meters_second_json')
+def index():
+    return  render_template('json/velocity/feet_second_to_meters_second.json')
+
+"""meters/second"""
+@app.route('/velocity/meters_second_to_miles_hour_json', endpoint='meters_second_to_miles_hour_json')
+def index():
+    return  render_template('json/velocity/meters_second_to_miles_hour.json')
+
+@app.route('/velocity/meters_second_to_kilometers_hour_json', endpoint='meters_second_to_kilometers_hour_json')
+def index():
+    return  render_template('json/velocity/meters_second_to_kilometers_hour.json')
+
+@app.route('/velocity/meters_second_to_speed_of_light_json', endpoint='meters_second_to_speed_of_light_json')
+def index():
+    return  render_template('json/velocity/meters_second_to_speed_of_light.json')
+
+@app.route('/velocity/meters_second_to_feet_second_json', endpoint='meters_second_to_fet_second_json')
+def index():
+    return  render_template('json/velocity/meters_second_to_feet_second.json')
+
+
+
 #add.app_url_rule('/', view_func=View.as_view('main'), methods=['GET','POST'])
 
 if __name__ == '__main__':
