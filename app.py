@@ -716,6 +716,127 @@ def index():
         data['res'] = float(data['num'])*float(jsondata['value'])
     elif data['unit'] == 'Btu' and data['unitres'] == 'Btu' and trigger == 5:
         data['res'] = float(data['num'])*1.0
+
+
+    elif data['unit'] == 'miles/hour' and data['unitres'] == 'miles/hour' and trigger == 5:
+        data['res'] = float(data['num'])*1.0
+    elif data['unit'] == 'miles/hour' and data['unitres'] == 'kilometers/hour' and trigger == 5:
+        json_file = open('templates/json/velocity/miles_hour_to_kilometers_hour.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'miles/hour' and data['unitres'] == 'speed of light' and trigger == 5:
+        json_file = open('templates/json/velocity/miles_hour_to_speed_of_light.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'miles/hour' and data['unitres'] == 'feet/second' and trigger == 5:
+        json_file = open('templates/json/velocity/miles_hour_to_feet_second.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'miles/hour' and data['unitres'] == 'meters/second' and trigger == 5:
+        json_file = open('templates/json/velocity/miles_hour_to_meters_second.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
+
+    
+    elif data['unit'] == 'kilometers/hour' and data['unitres'] == 'miles/hour' and trigger == 5:
+        json_file = open('templates/json/velocity/kilometers_hour_to_miles_hour.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'kilometers/hour' and data['unitres'] == 'kilometers/hour' and trigger == 5:
+        data['res'] = float(data['num'])*1.0
+    elif data['unit'] == 'kilometers/hour' and data['unitres'] == 'speed of light' and trigger == 5:
+        json_file = open('templates/json/velocity/kilometers_hour_to_speed_of_light.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'kilometers/hour' and data['unitres'] == 'feet/second' and trigger == 5:
+        json_file = open('templates/json/velocity/kilometers_hour_to_feet_second.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'kilometers/hour' and data['unitres'] == 'meters/second' and trigger == 5:
+        json_file = open('templates/json/velocity/kilometers_hour_to_meters_second.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
+
+    elif data['unit'] == 'speed of light' and data['unitres'] == 'miles/hour' and trigger == 5:
+        json_file = open('templates/json/velocity/speed_of_light_to_miles_hour.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'speed of light' and data['unitres'] == 'kilometers/hour' and trigger == 5:
+        json_file = open('templates/json/velocity/speed_of_light_to_kilometers_hour.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'speed of light' and data['unitres'] == 'speed of light' and trigger == 5:
+        data['res'] = float(data['num'])*1.0
+    elif data['unit'] == 'speed of light' and data['unitres'] == 'feet/second' and trigger == 5:
+        json_file = open('templates/json/velocity/speed_of_light_to_feet_second.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'speed of light' and data['unitres'] == 'meters/second' and trigger == 5:
+        json_file = open('templates/json/velocity/speed_of_light_to_meters_second.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
+
+    elif data['unit'] == 'feet/second' and data['unitres'] == 'miles/hour' and trigger == 5:
+        json_file = open('templates/json/velocity/feet_second_to_miles_hour.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'feet/second' and data['unitres'] == 'kilometers/hour' and trigger == 5:
+        json_file = open('templates/json/velocity/feet_second_to_kilometers_hour.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'feet/second' and data['unitres'] == 'speed of light' and trigger == 5:
+        json_file = open('templates/json/velocity/feet_second_to_speed_of_light.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'feet/second' and data['unitres'] == 'feet/second' and trigger == 5:
+        data['res'] = float(data['num'])*1.0
+    elif data['unit'] == 'feet/second' and data['unitres'] == 'meters/second' and trigger == 5:
+        json_file = open('templates/json/velocity/feet_second_to_meters_second.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+
+
+    elif data['unit'] == 'meters/second' and data['unitres'] == 'miles/hour' and trigger == 5:
+        json_file = open('templates/json/velocity/meters_second_to_miles_hour.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'meters/second' and data['unitres'] == 'kilometers/hour' and trigger == 5:
+        json_file = open('templates/json/velocity/meters_second_to_kilometers_hour.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'meters/second' and data['unitres'] == 'speed of light' and trigger == 5:
+        json_file = open('templates/json/velocity/meters_second_to_speed_of_light.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'meters/second' and data['unitres'] == 'feet/second' and trigger == 5:
+        json_file = open('templates/json/velocity/meters_second_to_feet_second.json')
+        jsondata = json.load(json_file)
+        json_file.close()
+        data['res'] = float(data['num'])*float(jsondata['value'])
+    elif data['unit'] == 'meters/second' and data['unitres'] == 'meters/second' and trigger == 5:
+        data['res'] = float(data['num'])*1.0
     
     else:
         data['res'] = "Result appears here"
