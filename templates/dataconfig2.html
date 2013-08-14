@@ -228,7 +228,7 @@
                 else if (my_value3 == 'velocity'){
                 var newOptions = {'miles/hour': 'miles/hour','kilometers/hour': 'kilometers/hour', 'speed of light':'speed of light','feet/second': 'feet/second', 'meters/second':'meters/second'};
                 }
-                else{
+                else {
                 var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet', 'yards':'yards', 'leagues':'leagues','ångströms':'angstroms', 'astronomical unit': 'astronomical unit', 'light years':'light years','centimeters':'centimeters','millimeters':'millimeters','nanometers':'nanometers'}; 
                 }
                 var $el = $("#units");
@@ -238,8 +238,6 @@
                 $.each(newOptions, function(key, value) {
                     $el.append($("<option></option>").attr("value", value).text(key));
                 });
-
-                
                 
                 $.each(newOptions, function(key, value) {
                     $eli.append($("<option></option>").attr("value", value).text(key));
