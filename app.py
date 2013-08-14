@@ -32,11 +32,7 @@ def page_not_found(error):
 
 @app.route('/', methods =['GET','POST'])
 def index():
-    global foo
-    global boo
-    foo = request.form.get('units',None)
-    boo = request.form.get('resultunit',None)
-    data = {'num':0, 'unit':foo, 'unitres':boo, 'res':'', 'mainunit':''}
+    data = {'num':0, 'unit':'meters', 'unitres':'meters', 'res':'', 'mainunit':''}
     data['num'] = request.form.get('number',None)
     data['unit'] = request.form.get('units',None)
     data['unitres'] = request.form.get('resultunit',None)
