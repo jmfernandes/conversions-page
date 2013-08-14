@@ -229,24 +229,19 @@
                 var newOptions = {'miles/hour': 'miles/hour','kilometers/hour': 'kilometers/hour', 'speed of light':'speed of light','feet/second': 'feet/second', 'meters/second':'meters/second'};
                 }
                 var $el = $("#units");
-                if( $('#units').has('option').length > 0 ) {
+                var $eli = $("#resultunit");
                 
                 $.each(newOptions, function(key, value) {
                     $el.append($("<option></option>").attr("value", value).text(key));
                 });
-                }
-                else {
-                $el.empty(); // remove old options
-                $.each(newOptions, function(key, value) {
-                    $el.append($("<option></option>").attr("value", value).text(key));
-                }); 
-                }
-                var $eli = $("#resultunit");
-                $eli.empty(); // remove old options
+
+                
+                
                 $.each(newOptions, function(key, value) {
                     $eli.append($("<option></option>").attr("value", value).text(key));
                 });
-                
+                $el.empty(); // remove old options
+                $eli.empty(); // remove old options
 
 
                 $('#maincat option').each(function(){
