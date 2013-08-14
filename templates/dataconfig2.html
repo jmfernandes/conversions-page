@@ -217,7 +217,7 @@
                                             });
                                      })
 
-
+                
 
                 if (my_value3 == 'energy') {
                 var newOptions = {'eV': 'eV','Joules': 'Joules','calories': 'calories', 'Btu':'Btu'};
@@ -229,27 +229,20 @@
                 var newOptions = {'miles/hour': 'miles/hour','kilometers/hour': 'kilometers/hour', 'speed of light':'speed of light','feet/second': 'feet/second', 'meters/second':'meters/second'};
                 }
                 var $el = $("#units");
-                                     //$el.empty(); // remove old options
-                                     $.each(newOptions, function(key, value) {
-                                            $el.append($("<option></option>")
-                                                       .attr("value", value).text(key));
-                                            });
+                if not $el
+                    $el.empty(); // remove old options
+                else
+                    //none
+                $.each(newOptions, function(key, value) {
+                    $el.append($("<option></option>").attr("value", value).text(key));
+                });
 
                 var $eli = $("#resultunit");
-                                     $eli.empty(); // remove old options
-                                     $.each(newOptions, function(key, value) {
-                                            $eli.append($("<option></option>")
-                                                       .attr("value", value).text(key));
-                                            });
+                $eli.empty(); // remove old options
+                $.each(newOptions, function(key, value) {
+                    $eli.append($("<option></option>").attr("value", value).text(key));
+                });
                 
-
-                //var my_value4 = $("#maincat").val();
-
-
-                
-                //$('#printHere').html(my_value4);
-                //$('#printHere2').html(my_value3);
-                //$('#printHere3').html(my_value);
 
 
                 $('#maincat option').each(function(){
