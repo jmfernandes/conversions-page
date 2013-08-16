@@ -851,7 +851,7 @@ def index():
 
     """return the webpage"""
 
-    return  render_template('dataconfig2.html', data=data)
+    return  render_template('conversion.html', data=data)
 
 
 
