@@ -1,1 +1,0 @@
-you entered <?php echo $_GET["cinput"]; ?>.
