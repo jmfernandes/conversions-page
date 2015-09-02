@@ -186,8 +186,8 @@
             <script>
                 //$("#  s option[value='eV']").remove();
                 
-                var my_value = '{{ data.   }}';
-                var my_value2 = '{{ data.  res }}';
+                var my_value = '{{ data.num   }}';
+                var my_value2 = '{{ data.res }}';
                 var my_value3 = '{{ data.main   }}';
 
                 $("#maincat").change(function(){
@@ -201,7 +201,7 @@
                                      else if (this.options[this.selectedIndex].value == 'velocity') {
                                      var newOptions2 = {'miles/hour': 'miles/hour','kilometers/hour': 'kilometers/hour', 'speed of light':'speed of light','feet/second': 'feet/second', 'meters/second':'meters/second'};
                                      };
-                                     var $ele = $("#  s");
+                                     var $ele = $("#s");
                                      $ele.empty(); // remove old options
                                      $.each(newOptions2, function(key, value) {
                                             $ele.append($("<option></option>")
@@ -231,7 +231,7 @@
                 else {
                 var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet', 'yards':'yards', 'leagues':'leagues','ångströms':'angstroms', 'astronomical   ': 'astronomical   ', 'light years':'light years','centimeters':'centimeters','millimeters':'millimeters','nanometers':'nanometers'}; 
                 }
-                var $el = $("#  s");
+                var $el = $("#s");
                 var $eli = $("#result  ");
                 $el.empty(); // remove old options
                 $eli.empty(); // remove old options
