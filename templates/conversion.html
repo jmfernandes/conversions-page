@@ -186,8 +186,8 @@
             <script>
                 //$("#units option[value='eV']").remove();
                 
-                var my_value = {{data.unit}};
-                var my_value2 = {{data.unitres}};
+                var my_value = 'None';
+                var my_value2 = 'None';
                 var my_value3 = 'None';
 
                 $("#maincat").change(function(){
@@ -248,7 +248,7 @@
                 $('#maincat option').each(function(){
                                         var $this = $(this); // cache the this jQuery object to avoid overhead
                                         
-                                        if ($this.val() == my_value3) { // if this option's value is equal to our value
+                                        if ($this.val() == 'my_value3') { // if this option's value is equal to our value
                                         $this.prop('selected', true); // select this option
                                         return false; // break the loop, no need to look further
                                         }
@@ -258,7 +258,7 @@
                 $('#units option').each(function(){
                                         var $this = $(this); // cache the this jQuery object to avoid overhead
                 
-                                        if ($this.val() == my_value) { // if this option's value is equal to our value
+                                        if ($this.val() == 'my_value') { // if this option's value is equal to our value
                                         $this.prop('selected', true); // select this option
                                         return false; // break the loop, no need to look further
                                         }
@@ -267,7 +267,7 @@
                 $('#resultunit option').each(function(){
                                         var $this = $(this); // cache the this jQuery object to avoid overhead
                                         
-                                        if ($this.val() == my_value2) { // if this option's value is equal to our value
+                                        if ($this.val() == 'my_value2') { // if this option's value is equal to our value
                                         $this.prop('selected', true); // select this option
                                         return false; // break the loop, no need to look further
                                         }
