@@ -141,7 +141,7 @@
                                 <br>
                                 <span class="help-inline"><h4>is</h4></span>
                                 <br>
-                                    <input type="text" id="result" name="result" class="span3" value="Result appears here" >
+                                    <input type="text" id="result" name="result" class="span3" value={{data.res}}} >
                                     <select class="span2" id="resultunit" name="resultunit">
                                         <option id='meters' value='meters'>meters</option>
                                         <option id='inches' value='inches'>inches</option>
@@ -186,9 +186,9 @@
             <script>
                 //$("#units option[value='eV']").remove();
                 
-                var my_value = 'None';
-                var my_value2 = 'None';
-                var my_value3 = 'None';
+                var my_value = {{data.unit}};
+                var my_value2 = {{data.unitres}};
+                var my_value3 = {{data.mainunit}};
 
                 $("#maincat").change(function(){
                                      $('input[name="result"]').val("Result appears here");
