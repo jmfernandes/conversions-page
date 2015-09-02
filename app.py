@@ -41,7 +41,7 @@ def index():
     try:
         val = float(data['num'])
     except:
-        data['num'] = "Type value here"
+        data['num'] = ""
         data['res'] = "Result appears here"
         trigger = 6
     #modify data['num'] with json data
