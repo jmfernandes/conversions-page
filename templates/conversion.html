@@ -124,8 +124,8 @@
                                         <option id='velocity' value='velocity'>Convert Velocities</option>
                                     </select>
                                     <br>
-                                    <input type="text" name="number" class="span3" value="{{data['num']}}">
-                                    <select class="span2" id="  s" name="  s">
+                                    <input type="text" id="s" name="s" class="span3" value="{{data['num']}}">
+                                    <select class="span2" id="s" name="s">
                                         <option id='meters' value='meters'>meters</option>
                                         <option id='inches' value='inches'>inches</option>
                                         <option id='feet' value='feet'>feet</option>
@@ -142,7 +142,7 @@
                                 <span class="help-inline"><h4>is</h4></span>
                                 <br>
                                     <input type="text" id="result" name="result" class="span3" value="{{data['res']}}" >
-                                    <select class="span2" id="result  " name="result  ">
+                                    <select class="span2" id="result" name="result">
                                         <option id='meters' value='meters'>meters</option>
                                         <option id='inches' value='inches'>inches</option>
                                         <option id='feet' value='feet'>feet</option>
@@ -209,7 +209,7 @@
                                             });
                                      
                                      
-                                     var $elie = $("#result  ");
+                                     var $elie = $("#result");
                                      $elie.empty(); // remove old options
                                      $.each(newOptions2, function(key, value) {
                                             $elie.append($("<option></option>")
@@ -232,7 +232,7 @@
                 var newOptions = {'meters': 'meters','inches': 'inches','feet': 'feet', 'yards':'yards', 'leagues':'leagues','ångströms':'angstroms', 'astronomical   ': 'astronomical   ', 'light years':'light years','centimeters':'centimeters','millimeters':'millimeters','nanometers':'nanometers'}; 
                 }
                 var $el = $("#s");
-                var $eli = $("#result  ");
+                var $eli = $("#result");
                 $el.empty(); // remove old options
                 $eli.empty(); // remove old options
                 $.each(newOptions, function(key, value) {
@@ -264,7 +264,7 @@
                                         }
                                         });
                 
-                $('#result   option').each(function(){
+                $('#result option').each(function(){
                                         var $this = $(this); // cache the this jQuery object to avoid overhead
                                         
                                         if ($this.val() == my_value2) { // if this option's value is equal to our value
